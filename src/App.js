@@ -5,6 +5,7 @@ import './App.css';
 import HideText from './component/HideText';
 import AutoComplete from "./component/AutoComplete";
 import IntegrationAutosuggest from "./component/IntegrationAutosuggest";
+import dbAlter from "./component/dbAlter"
 
 //<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 //Initialized firebase
@@ -31,6 +32,9 @@ function App() {
       </header>
 
       <div>
+        <div className="dbalter">
+          <dbAlter database={db}/>
+        </div>
         <AutoComplete />
         <div style={{width:"50%", margin:"auto"}}>
           <IntegrationAutosuggest placeholder="I'm feeling lucky!"/>
