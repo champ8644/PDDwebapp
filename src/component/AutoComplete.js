@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 import './AutoComplete.css';
 
 export default function AutoComplete (props) {
     const [items, setitem] = useState([
         "Apple",
-        "Banana",
-        "Camel",
-        "Dog",
+        "Apper",
+        "Appws",
+        "Aqsdf",
         "Elephant",
     ]);
 
