@@ -2,10 +2,10 @@ import React from 'react';
 import firebase from 'firebase';
 import logo from './logo.svg';
 import './App.css';
-import HideText from './component/HideText';
-import AutoComplete from "./component/AutoComplete";
-import IntegrationAutosuggest from "./component/IntegrationAutosuggest";
-import dbAlter from "./component/dbAlter"
+import HideText from './CustomChamp/HideText';
+import AutoComplete from "./CustomChamp/AutoComplete";
+import IntegrationAutosuggest from "./CustomChamp/IntegrationAutosuggest";
+import DbUpdate from "./CustomChamp/dbUpdate"
 
 //<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 //Initialized firebase
@@ -32,9 +32,7 @@ function App() {
       </header>
 
       <div>
-        <div className="dbalter">
-          <dbAlter database={db}/>
-        </div>
+        <DbUpdate database={db}/>
         <AutoComplete />
         <div style={{width:"50%", margin:"auto"}}>
           <IntegrationAutosuggest placeholder="I'm feeling lucky!"/>
