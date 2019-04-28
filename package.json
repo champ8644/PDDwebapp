@@ -11,6 +11,7 @@
     "chartist": "0.10.1",
     "classnames": "2.2.6",
     "firebase": "^5.10.1",
+    "firebase-admin": "^7.3.0",
     "global": "^4.3.2",
     "history": "4.7.2",
     "package": "^1.0.1",

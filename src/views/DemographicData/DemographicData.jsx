@@ -40,7 +40,7 @@ function UserProfile(props) {
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={5} lg={4}>
+        <GridItem xs={12} sm={6} md={4} lg={3}>
           <Card>
             <CardBody>
               <HNInput

@@ -7,11 +7,12 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
+import TextField from "@material-ui/core/TextField";
 // @material-ui/icons
 import Clear from "@material-ui/icons/Clear";
 import Check from "@material-ui/icons/Check";
 // core components
-import customInputStyle from "assets/jss/material-dashboard-react/components/customInputStyle.jsx";
+import HNInputStyle from "assets/jss/material-dashboard-react/components/HNInputStyle.jsx";
 
 function TextMaskCustom(props) {
   const { inputRef, ...other } = props;
@@ -82,9 +83,9 @@ function CustomInput({ ...props }) {
   });
 
   var styleMargin = {};
-  if (props.noMargin) {
+  /*if (props.noMargin) {
     styleMargin = {margin:"0 0 0 0"};
-  }
+  }*/
 
   const [values, setValues] = React.useState({
     textmask: '',
@@ -100,27 +101,35 @@ function CustomInput({ ...props }) {
       className={formControlProps.className + " " + classes.formControl}
       style={styleMargin}
     >
-      {labelText !== undefined ? (
-        <InputLabel
-          className={classes.labelRoot + labelClasses}
-          htmlFor={id}
-          {...labelProps}
-        >
-          {labelText}
-        </InputLabel>
-      ) : null}
-      <Input
-        value={values.textmask}
-        onChange={handleChange('textmask')}
-        inputComponent={TextMaskCustom}
-        classes={{
-          root: marginTop,
-          disabled: classes.disabled,
-          underline: underlineClasses
+      <TextField
+        className={classes.margin}
+        InputLabelProps={{
+          className: classes.labelRoot + labelClasses,
+          htmlFor: id,
+          classes: {
+            root: classes.cssLabel,
+            focused: classes.cssFocused,
+          },
+          ...labelProps
         }}
+        InputProps={{
+          value: values.textmask,
+          onChange: handleChange('textmask'),
+          inputComponent: TextMaskCustom,
+          classes: {
+            root: marginTop,
+            disabled: classes.disabled,
+            underline: underlineClasses,
+            focused: classes.cssFocused,
+            notchedOutline: classes.notchedOutline,
+          },
+          ...inputProps
+        }}
+        label="HN"
+        variant="outlined"
         id={id}
-        {...inputProps}
       />
+
       {error ? (
         <Clear className={classes.feedback + " " + classes.labelRootError} />
       ) : success ? (
@@ -141,4 +150,4 @@ CustomInput.propTypes = {
   success: PropTypes.bool
 };
 
-export default withStyles(customInputStyle)(CustomInput);
+export default withStyles(HNInputStyle)(CustomInput);

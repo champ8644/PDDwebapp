@@ -40,7 +40,7 @@ function Tempapp() {
       </header>
 
       <div>
-        <DbUpdate database={db}/>
+        <DbUpdate />
         <AutoComplete />
         <div style={{width:"50%", margin:"auto"}}>
           <IntegrationAutosuggest placeholder="I'm feeling lucky!"/>
