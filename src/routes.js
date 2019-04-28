@@ -34,6 +34,7 @@ const dashboardRoutes = [
     rtlName: "لوحة القيادة",
     icon: Dashboard,
     component: DashboardPage,
+    invisible: false,
     layout: "/admin"
   },
   {
