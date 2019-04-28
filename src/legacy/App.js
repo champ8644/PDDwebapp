@@ -2,10 +2,10 @@ import React from 'react';
 import firebase from 'firebase';
 import logo from './logo.svg';
 import './App.css';
-import HideText from './CustomChamp/HideText';
-import AutoComplete from "./CustomChamp/AutoComplete";
-import IntegrationAutosuggest from "./CustomChamp/IntegrationAutosuggest";
-import DbUpdate from "./CustomChamp/dbUpdate"
+import HideText from '../views/Tempapp/legacy/HideText';
+import AutoComplete from "../views/Tempapp/legacy/AutoComplete";
+import IntegrationAutosuggest from "../views/Tempapp/legacy/IntegrationAutosuggest";
+import DbUpdate from "../views/Tempapp/legacy/dbUpdate"
 
 //<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 //Initialized firebase

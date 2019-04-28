@@ -12,7 +12,11 @@ export default function DbUpdate(props){
         let promise = new Promise((resolve, reject) => {
             
             resolve("done");
-        }.then(() => setSuccess("Database alter successfully!"),err => setSuccess("Error : "+err));
+        }).then(() => {
+            setSuccess("Database alter successfully!");
+        }, (err) => {
+            setSuccess("Error : "+err);
+        });
     }
 
     const cleartext = () => {
