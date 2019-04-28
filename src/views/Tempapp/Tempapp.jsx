@@ -7,6 +7,7 @@ import AutoComplete from "views/Tempapp/legacy/AutoComplete";
 import IntegrationAutosuggest from "views/Tempapp/legacy/IntegrationAutosuggest";
 import DbUpdate from "views/Tempapp/legacy/dbUpdate";
 
+
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -39,7 +40,7 @@ function Tempapp() {
       </header>
 
       <div>
-        <DbUpdate database={db}/>
+        <DbUpdate />
         <AutoComplete />
         <div style={{width:"50%", margin:"auto"}}>
           <IntegrationAutosuggest placeholder="I'm feeling lucky!"/>

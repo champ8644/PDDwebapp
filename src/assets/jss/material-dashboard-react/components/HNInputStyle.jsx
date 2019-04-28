@@ -35,8 +35,8 @@ const customInputStyle = {
     ...defaultFont,
     color: grayColor[3] + " !important",
     fontWeight: "400",
-    fontSize: "14px",
-    lineHeight: "1.42857"
+    fontSize: "20px",
+    lineHeight: "1"
   },
   labelRootError: {
     color: dangerColor[0]
@@ -56,13 +56,13 @@ const customInputStyle = {
     pointerEvents: "none"
   },
   marginTop: {
-    marginTop: "16px"
+    marginTop: "0px"
   },
   formControl: {
     paddingBottom: "10px",
-    margin: "20px 0 0 0",
+    margin: "10px 0 0 0",
     position: "relative",
-    verticalAlign: "unset"
+    verticalAlign: "unset",
   },
 };
 

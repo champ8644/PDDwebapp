@@ -11,6 +11,7 @@
     "chartist": "0.10.1",
     "classnames": "2.2.6",
     "firebase": "^5.10.1",
+    "firebase-admin": "^7.3.0",
     "global": "^4.3.2",
     "history": "4.7.2",
     "package": "^1.0.1",
@@ -22,9 +23,11 @@
     "react-chartist": "0.13.3",
     "react-dom": "16.8.1",
     "react-google-maps": "9.4.5",
+    "react-number-format": "^4.0.7",
     "react-router-dom": "4.3.1",
     "react-scripts": "2.1.5",
     "react-swipeable-views": "0.13.1",
+    "react-text-mask": "^5.4.3",
     "yarn": "^1.15.2"
   },
   "scripts": {
