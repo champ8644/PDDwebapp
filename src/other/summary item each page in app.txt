@@ -1,0 +1,16 @@
+Demographics data
+- all dem -xx
+- current med -3m
+- status med -u
+- current symptom -u
+- past pill -u
+- past symptoms -u
+meds
+- current meds -3m
+- status meds -u
+memo
+- past symptoms -u
+- past med -u
+- current meds -3m
+settingsj
+- current settings -u

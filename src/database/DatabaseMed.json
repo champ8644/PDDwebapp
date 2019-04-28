@@ -1,0 +1,1304 @@
+[
+    {
+        "Text": "Carbidopa/levodopa immediate-release (Sinemet®)",
+        "Type": "DOPA decarboxylase/L-dopa",
+        "Trade name": "Sinemet",
+        "Generic name": "Carbidopa/levodopa",
+        "Note": "immediate-release",
+        "keyword": [
+            "Carbidopa",
+            "Levodopa"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "25/100"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Carbidopa/levodopa enteral solution (Duopa®)",
+        "Type": "DOPA decarboxylase/L-dopa",
+        "Trade name": "Duopa",
+        "Generic name": "Carbidopa/levodopa",
+        "Note": "enteral solution",
+        "keyword": [
+            "Carbidopa",
+            "Levodopa"
+        ],
+        "Dosage form": "enteral solution",
+        "dose": [
+            "5/20"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Carbidopa/levodopa/entacapone (Stalevo®)",
+        "Type": "DOPA decarboxylase/L-dopa/COMT",
+        "Trade name": "Stalevo",
+        "Generic name": "Carbidopa/levodopa/entacapone",
+        "keyword": [
+            "Carbidopa",
+            "Levodopa",
+            "Entacapone"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "25/100/200",
+            "37.5/150/200"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Levodopa/benserazide (Vopar®)",
+        "Type": "DOPA decarboxylase/L-dopa",
+        "Trade name": "Vopar",
+        "Generic name": "Levodopa/benserazide",
+        "keyword": [
+            "Levodopa",
+            "Benserazide"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "50/200"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Levodopa/benserazide (Madopar®)",
+        "Type": "DOPA decarboxylase/L-dopa",
+        "Trade name": "Madopar",
+        "Generic name": "Levodopa/benserazide",
+        "keyword": [
+            "Levodopa",
+            "Benserazide"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "50/200"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Madopar Dispersible",
+        "Type": "DOPA decarboxylase/L-dopa",
+        "Trade name": "Madopar Dispersible",
+        "Generic name": "Levodopa/benserazide",
+        "keyword": [
+            "Levodopa",
+            "Benserazide",
+            "Dispersible"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "25/100"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Madopar HBS controlled release",
+        "Type": "DOPA decarboxylase/L-dopa",
+        "Trade name": "Madopar HBS",
+        "Generic name": "Levodopa/benserazide",
+        "keyword": [
+            "Levodopa",
+            "Benserazide",
+            "HBS"
+        ],
+        "Dosage form": "cap",
+        "dose": [
+            "25/100"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Selegiline HCl (Julab®)",
+        "Type": "MAO-B",
+        "Trade name": "Julab",
+        "Generic name": "Selegiline HCl",
+        "Dosage form": "tab",
+        "dose": [
+            "5"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Rasagiline (Azilect®)",
+        "Type": "MAO-B",
+        "Trade name": "Azilect",
+        "Generic name": "Rasagiline",
+        "Dosage form": "tab",
+        "dose": [
+            "1"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Entacapone (Comtan®)",
+        "Type": "COMT",
+        "Trade name": "Comtan",
+        "Generic name": "Entacapone",
+        "Dosage form": "tab",
+        "dose": [
+            "200"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Trihexyphenidyl HCl (ACA, Benzhexol,pozhexol®)",
+        "Type": "Anticholinergics",
+        "Trade name": "ACA",
+        "Generic name": "Trihexyphenidyl HCl",
+        "keyword": [
+            "Benzhexol",
+            "pozhexol"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "2",
+            "5"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Clonazepam (Prenapril®)",
+        "Type": "Benzodiapepine",
+        "Trade name": "Prenapril",
+        "Generic name": "Clonazepam",
+        "keyword": [
+            "Rivotril"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "0.5",
+            "2"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Clonazepam (Rivotril®)",
+        "Type": "Benzodiapepine",
+        "Trade name": "Rivotril",
+        "Generic name": "Clonazepam",
+        "keyword": [
+            "Prenapril"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "0.5",
+            "2"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Ropinirole (Requip®)",
+        "Type": "Dopamine agonists",
+        "Trade name": "Requip PD 24 Hour",
+        "Generic name": "Ropinirole",
+        "Dosage form": "tab",
+        "dose": [
+            "2",
+            "4",
+            "8"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Pramipexole (Sifrol®)",
+        "Type": "Dopamine agonists",
+        "Trade name": "Sifrol",
+        "Generic name": "Pramipexole",
+        "Dosage form": "tab",
+        "dose": [
+            "0.25",
+            "1"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Pramipexole (Sifrol ER®)",
+        "Type": "Dopamine agonists",
+        "Trade name": "Sifrol ER",
+        "Generic name": "Pramipexole",
+        "Note": "extended-release",
+        "keyword": [
+            "Extended Release"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "0.375",
+            "1.5",
+            "3"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Rotigotine (Neupro®)",
+        "Type": "Dopamine agonists",
+        "Trade name": "Neupro",
+        "Generic name": "Rotigotine",
+        "Dosage form": "patch",
+        "dose": [
+            "2",
+            "4",
+            "6",
+            "8"
+        ],
+        "unit": "mg/24 hr"
+    },
+    {
+        "Text": "Apomorphine (APO-GO®)",
+        "Type": "Dopamine agonists",
+        "Trade name": "APO-GO",
+        "Generic name": "Apomorphine",
+        "Dosage form": "inj",
+        "dose": [
+            "10"
+        ],
+        "unit": "mg/mL"
+    },
+    {
+        "Text": "Piribedil (Trivastal Retard®)",
+        "Type": "Dopamine agonists",
+        "Trade name": "Trivastal Retard",
+        "Generic name": "Piribedil",
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Bromocriptine (Bromergon®)",
+        "Type": "Dopamine agonists",
+        "Trade name": "Bromergon",
+        "Generic name": "Bromocriptine",
+        "Dosage form": "tab",
+        "dose": [
+            "2.5"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Alprazolam (Alprazolam®)",
+        "Type": "Benzodiapepine",
+        "Trade name": "Alprazolam",
+        "Generic name": "Alprazolam",
+        "Dosage form": "tab",
+        "dose": [
+            "0.25",
+            "0.5",
+            "1"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Nortriptyline (Ortrip®)",
+        "Type": "Antidepressants",
+        "Trade name": "Ortrip",
+        "Generic name": "Nortriptyline",
+        "Dosage form": "tab",
+        "dose": [
+            "10",
+            "25"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Amitriptyline (Tripta®)",
+        "Type": "Antidepressants",
+        "Trade name": "Tripta",
+        "Generic name": "Amitriptyline",
+        "Dosage form": "tab",
+        "dose": [
+            "10",
+            "25",
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Quetiapine (Quantia®)",
+        "Type": "Antidepressants",
+        "Trade name": "Quantia",
+        "Generic name": "Quetiapine",
+        "Dosage form": "tab",
+        "dose": [
+            "25",
+            "100",
+            "200"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Quetiapine (Seroquel®)",
+        "Type": "Antidepressants",
+        "Trade name": "Seroquel",
+        "Generic name": "Quetiapine",
+        "Dosage form": "tab",
+        "dose": [
+            "25"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Quetiapine (Seoquel XR®)",
+        "Type": "Antidepressants",
+        "Trade name": "Seoquel XR",
+        "Generic name": "Quetiapine",
+        "Dosage form": "tab",
+        "dose": [
+            "50",
+            "150",
+            "300"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Aripiprazole (Abilify tablet®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Abilify tablet",
+        "Generic name": "Aripiprazole",
+        "Dosage form": "tab",
+        "dose": [
+            "2"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Aripiprazole (Abilify maintena®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Abilify maintena",
+        "Generic name": "Aripiprazole",
+        "Dosage form": "tab",
+        "dose": [
+            "300",
+            "400"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Aripiprazole (Abilify discmelt®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Abilify discmelt",
+        "Generic name": "Aripiprazole",
+        "Dosage form": "tab",
+        "dose": [
+            "10",
+            "15"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Aripiprazole (Abilify solution®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Abilify solution",
+        "Generic name": "Aripiprazole",
+        "Dosage form": "oral sol",
+        "dose": [
+            "1"
+        ],
+        "unit": "mg/mL"
+    },
+    {
+        "Text": "Sertraline (Serlift®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Serlift",
+        "Generic name": "Sertraline",
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Sertraline (Zoloft®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Zoloft",
+        "Generic name": "Sertraline",
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Venlafaxine (Vasoline®)",
+        "Type": "Antidepressants",
+        "Trade name": "Valsoline",
+        "Generic name": "Venlafaxine",
+        "Dosage form": "cap",
+        "dose": [
+            "75"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Venlafaxine (Efexor XR®)",
+        "Type": "Antidepressants",
+        "Trade name": "Efexor XR",
+        "Generic name": "Venlafaxine",
+        "Dosage form": "cap",
+        "dose": [
+            "37.5",
+            "75"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Agomelatine (Valdoxan®)",
+        "Type": "Antidepressants",
+        "Trade name": "Valdoxan",
+        "Generic name": "Agomelatine",
+        "Dosage form": "tab",
+        "dose": [
+            "25"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Paroxetine (Seroxat®)",
+        "Type": "Antidepressants",
+        "Trade name": "Seroxat",
+        "Generic name": "Paroxetine",
+        "Dosage form": "tab",
+        "dose": [
+            "20"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Escitalopram (Esidep®, Lexapro®)",
+        "Type": "Antidepressants",
+        "Trade name": "Lexapro",
+        "Generic name": "Escitalopram",
+        "keyword": [
+            "Esidep"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Desvenlafaxine (Pristiq®)",
+        "Type": "Antidepressants",
+        "Trade name": "Pristiq",
+        "Generic name": "Desvenlafaxine",
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Clozapine (Clopaze®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Clopaze",
+        "Generic name": "Clozapine",
+        "Dosage form": "tab",
+        "dose": [
+            "25",
+            "100"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Clozapine (Clozaril®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Clozaril",
+        "Generic name": "Clozapine",
+        "Dosage form": "tab",
+        "dose": [
+            "25",
+            "100"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Melatonin (Circadin®)",
+        "Type": "Hypnotic",
+        "Trade name": "Circadin PR",
+        "Generic name": "Melatonin",
+        "Dosage form": "tab",
+        "dose": [
+            "2"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Zopidem (Ambien®)",
+        "Type": "Hypnotic",
+        "Trade name": "Ambien",
+        "Generic name": "Zopidem",
+        "Dosage form": "tab",
+        "dose": [
+            "5",
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Trazodone (Dezodone®, Desirel®)",
+        "Type": "Antidepressants",
+        "Trade name": "Desirel",
+        "Generic name": "Trazodone",
+        "keyword": [
+            "Dezodone"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Pimavaserin (Nuplazid®)",
+        "Type": "Antipsychotics",
+        "Trade name": "Nuplazid",
+        "Generic name": "Pimavaserin",
+        "Dosage form": "tab",
+        "dose": [
+            "17"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Modafinil (Provigil®)",
+        "Type": "CNS Stimulant",
+        "Trade name": "Provigil",
+        "Generic name": "Modafinil",
+        "Dosage form": "tab",
+        "dose": [
+            "100",
+            "200"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Betahistine dihydrochloride (SERC®, Betaserc®)",
+        "Type": "AntiVertigo",
+        "Trade name": "SERC",
+        "Generic name": "Betahistine dihydrochloride",
+        "keyword": [
+            "Betaserc"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "16",
+            "24"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Betahistine nesylate (Merislon®)",
+        "Type": "AntiVertigo",
+        "Trade name": "Merislon",
+        "Generic name": "Betahistine nesylate",
+        "Dosage form": "tab",
+        "dose": [
+            "6",
+            "12"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Dimenhydrinate (Navamin tablet®)",
+        "Type": "AntiVertigo",
+        "Trade name": "Navamin",
+        "Generic name": "Dimenhydrinate",
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Dimen (Dimovit injection®)",
+        "Type": "AntiVertigo",
+        "Trade name": "Dimeno",
+        "Generic name": "Dimenhydrinate",
+        "keyword": [
+            "Dimovit"
+        ],
+        "Dosage form": "inj",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg/mL"
+    },
+    {
+        "Text": "Paracetamol",
+        "Type": "Analgesics",
+        "Trade name": "Sara",
+        "Generic name": "Paracetamol",
+        "keyword": [
+            "Pamol",
+            "Poro",
+            "Tylenol"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "325",
+            "500"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Tramadol",
+        "Type": "Analgesics",
+        "Trade name": "Tramal",
+        "Generic name": "Tramadol",
+        "keyword": [
+            "Tramadol Stada"
+        ],
+        "Dosage form": "cap",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Norgesic",
+        "Type": "Analgesics",
+        "Trade name": "Norgesic",
+        "Generic name": "Paracetamol/Orphenadrine",
+        "keyword": [
+            "Orphenadrine"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "35/450"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Gabapentin (Gabapentin Sandoz®, Neurontin®)",
+        "Type": "Analgesics",
+        "Trade name": "Gabapentin Sandoz",
+        "Generic name": "Gabapentin",
+        "keyword": [
+            "Neurontin"
+        ],
+        "Dosage form": "cap",
+        "dose": [
+            "100",
+            "300"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Gabapentin (Rontin®, Neurontin®)",
+        "Type": "Analgesics",
+        "Trade name": "Rontin",
+        "Generic name": "Gabapentin",
+        "keyword": [
+            "Neurontin"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "600"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Pregabalin (Lyrica®)",
+        "Type": "Analgesics",
+        "Trade name": "Lyrica",
+        "Generic name": "Pregabalin",
+        "keyword": [
+            "Pregabalin Sandoz",
+            "Brillor"
+        ],
+        "Dosage form": "cap",
+        "dose": [
+            "25",
+            "75",
+            "150"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Naproxen (Naprosyn®, Naproxen GPO®)",
+        "Type": "Analgesics",
+        "Trade name": "Naprosyn",
+        "Generic name": "Naproxen",
+        "keyword": [
+            "Naproxen Gpo"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "250"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Celecoxib (Celebrex®)",
+        "Type": "Analgesics",
+        "Trade name": "Celebrex",
+        "Generic name": "Celecoxib",
+        "Dosage form": "cap",
+        "dose": [
+            "200",
+            "400"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Ibuprofen (Heidi®)",
+        "Type": "Analgesics",
+        "Trade name": "Heidi",
+        "Generic name": "Ibuprofen",
+        "keyword": [
+            "Nurofen"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "200",
+            "400"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Tolperisone (Biocalm®, Mydocalm®)",
+        "Type": "Analgesics",
+        "Trade name": "Biocalm",
+        "Generic name": "Tolperisone",
+        "keyword": [
+            "Mydocalm"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Omeprazole (Miracid®)",
+        "Type": "PU prophylaxis",
+        "Trade name": "Miracid",
+        "Generic name": "Omeprazole",
+        "Dosage form": "cap",
+        "dose": [
+            "20"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Pantoprazole (Controloc®)",
+        "Type": "PU prophylaxis",
+        "Trade name": "Controloc",
+        "Generic name": "Pantoprazole",
+        "Dosage form": "tab",
+        "dose": [
+            "20",
+            "40"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Esomeprazole (Nexium®)",
+        "Type": "PU prophylaxis",
+        "Trade name": "Nexium",
+        "Generic name": "Esomeprazole",
+        "Dosage form": "tab",
+        "dose": [
+            "20",
+            "40"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Ranitidine (Zanidine®)",
+        "Type": "PU prophylaxis",
+        "Trade name": "Zanidine",
+        "Generic name": "Ranitidine",
+        "Dosage form": "tab",
+        "dose": [
+            "150"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Fludrocortisone (Florinef®)",
+        "Type": "Corticosteroid",
+        "Trade name": "Florinef",
+        "Generic name": "Fludrocortisone",
+        "Dosage form": "tab",
+        "dose": [
+            "0.1"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Midorine (Midorine®)",
+        "Type": "Orthostatic hypotension",
+        "Trade name": "Midorine",
+        "Generic name": "Midorine",
+        "Dosage form": "tab",
+        "dose": [
+            "2.5",
+            "5",
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Droxidopa",
+        "Type": "Orthostatic hypotension",
+        "Trade name": "Northera",
+        "Generic name": "Droxidopa",
+        "Dosage form": "cap",
+        "dose": [
+            "100",
+            "200",
+            "300"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Sodium chloride (Soride®)",
+        "Type": "Miscellaneous",
+        "Trade name": "Soride",
+        "Generic name": "Sodium chloride",
+        "keyword": [
+            "Salt tab"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "300"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Glycopyrrolate",
+        "Type": "PU prophylaxis",
+        "Trade name": "Glycop",
+        "Generic name": "Glycopyrrolate",
+        "Dosage form": "inj",
+        "dose": [
+            "0.2"
+        ],
+        "unit": "mg/mL"
+    },
+    {
+        "Text": "Sildenafil (Elonza®)",
+        "Type": "Miscellaneous",
+        "Trade name": "Elonza",
+        "Generic name": "Sildenafil",
+        "keyword": [
+            "Revatio",
+            "Silatio",
+            "Viagra"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Sildenafil (Viagra®)",
+        "Type": "Miscellaneous",
+        "Trade name": "Viagra",
+        "Generic name": "Sildenafil",
+        "keyword": [
+            "Revatio",
+            "Silatio",
+            "Elonza"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "50",
+            "100"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Senokot (senna®)",
+        "Type": "Laxative",
+        "Trade name": "senna",
+        "Generic name": "Senokot",
+        "Dosage form": "tab",
+        "unit": "mg"
+    },
+    {
+        "Text": "Bisacodyl (Dulcolax®, Gencolax®)",
+        "Type": "Laxative",
+        "Trade name": "Dulcolax",
+        "Generic name": "Bisacodyl",
+        "keyword": [
+            "Gencolax"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "5"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Bisacodyl (Dulcolax suppo®)",
+        "Type": "Laxative",
+        "Trade name": "Dulcolax suppo",
+        "Generic name": "Bisacodyl",
+        "Dosage form": "suppo",
+        "dose": [
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Lactulose (Duphalac®)",
+        "Type": "Laxative",
+        "Trade name": "Duphalac",
+        "Generic name": "Lactulose",
+        "Dosage form": "syr",
+        "dose": [
+            "100"
+        ],
+        "unit": "mL"
+    },
+    {
+        "Text": "Milk of magnesia tablets",
+        "Type": "Laxative",
+        "Trade name": "Milk of magnesia",
+        "Generic name": "Magnesium Hydroxide",
+        "keyword": [
+            "MOM",
+            "Antacids"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "300"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Milk of magnesia suspension",
+        "Type": "Laxative",
+        "Trade name": "Milk of magnesia",
+        "Generic name": "Magnesium Hydroxide",
+        "keyword": [
+            "MOM",
+            "Antacids"
+        ],
+        "Dosage form": "susp",
+        "dose": [
+            "240"
+        ],
+        "unit": "mL"
+    },
+    {
+        "Text": "Unison enema",
+        "Type": "Laxative",
+        "Trade name": "Unima",
+        "Generic name": "Sodium Phosphate, Monobasic & Dibasic",
+        "keyword": [
+            "Unison enema",
+            "enema"
+        ],
+        "Dosage form": "enema",
+        "dose": [
+            "133"
+        ],
+        "unit": "mL"
+    },
+    {
+        "Text": "Motilium tab(Molax®)",
+        "Type": "AntiVomitting",
+        "Trade name": "Molax-m",
+        "Generic name": "Domperidone",
+        "keyword": [
+            "Motilium-m",
+            "Dominox"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Motilium susp(Molax®)",
+        "Type": "AntiVomitting",
+        "Trade name": "Molax-m",
+        "Generic name": "Domperidone",
+        "keyword": [
+            "Motilium-m",
+            "Dominox"
+        ],
+        "Dosage form": "susp",
+        "dose": [
+            "30"
+        ],
+        "unit": "mL"
+    },
+    {
+        "Text": "Metoclopramide (nausil®)",
+        "Type": "AntiVomitting",
+        "Trade name": "nausil",
+        "Generic name": "Metoclopramide",
+        "keyword": [
+            "vomitin"
+        ],
+        "dose": [
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Polyethylene glycol (Glycolax®)",
+        "Type": "Laxative",
+        "Trade name": "Glycolax",
+        "Generic name": "Polyethylene glycol",
+        "Dosage form": "powder",
+        "dose": [
+            "14",
+            "24",
+            "26"
+        ],
+        "unit": "oz"
+    },
+    {
+        "Text": "Memantine (Neumantine tablet®)",
+        "Type": "AntiDementia",
+        "Trade name": "Neumantine tablet",
+        "Generic name": "Memantine",
+        "Dosage form": "tab",
+        "dose": [
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Memantine (Ebixa tablet®)",
+        "Type": "AntiDementia",
+        "Trade name": "Ebixa tablet",
+        "Generic name": "Memantine",
+        "Dosage form": "tab",
+        "dose": [
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Memantine (Ebixa solution®)",
+        "Type": "AntiDementia",
+        "Trade name": "Ebixa solution",
+        "Generic name": "Memantine",
+        "Dosage form": "sol",
+        "dose": [
+            "5"
+        ],
+        "unit": "mg/pump"
+    },
+    {
+        "Text": "Galantamine (Reminyl®)",
+        "Type": "AntiDementia",
+        "Trade name": "Reminyl",
+        "Generic name": "Galantamine",
+        "Dosage form": "cap",
+        "dose": [
+            "8",
+            "16"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Rivastigmine Hydrogen tartrate (Exelon capsule®)",
+        "Type": "AntiDementia",
+        "Trade name": "Exelon capsule",
+        "Generic name": "Rivastigmine",
+        "Dosage form": "cap",
+        "dose": [
+            "1.5",
+            "3",
+            "4.5",
+            "6"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Rivastigmine solution (Exelon solution®)",
+        "Type": "AntiDementia",
+        "Trade name": "Exelon solution",
+        "Generic name": "Rivastigmine",
+        "Dosage form": "sol",
+        "dose": [
+            "2"
+        ],
+        "unit": "mg/mL"
+    },
+    {
+        "Text": "Rivastigmine patch (Exelon patch®)",
+        "Type": "AntiDementia",
+        "Trade name": "Exelon patch",
+        "Generic name": "Rivastigmine",
+        "Dosage form": "patch",
+        "dose": [
+            "4.6",
+            "9.5",
+            "13.3"
+        ],
+        "unit": "mg/patch"
+    },
+    {
+        "Text": "Donepazil HCl (Aricept Evess®, Dozemo®)",
+        "Type": "AntiDementia",
+        "Trade name": "Aricept Evess",
+        "Generic name": "Donepazil",
+        "keyword": [
+            "Dozemo"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "5",
+            "10"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "(Aricept extended release®)",
+        "Type": "AntiDementia",
+        "Trade name": "Aricept extended release",
+        "Generic name": "Donepazil",
+        "Note": "extended release",
+        "Dosage form": "tab",
+        "dose": [
+            "23"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Vitamin B1-6-12 (Neurobion®, one-six-twelve®, Princi B forte®, Sambee®, Vitaboin®)",
+        "Type": "Vitamins",
+        "Trade name": "one-six-twelve",
+        "Generic name": "Vitamin B1-6-12",
+        "keyword": [
+            "Vit B1-6-12",
+            "B1-6-12"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "100/5/50"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Vitamin B complex (B co-ed®, Biotaplex-BC®)",
+        "Type": "Vitamins",
+        "Trade name": "B co-ed",
+        "Generic name": "Vitamin B complex",
+        "keyword": [
+            "Metaplex",
+            "Biotaplex"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "x"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Pyridoxine HCl (Vitamin B6®)",
+        "Type": "Vitamins",
+        "Trade name": "Vitamin B6",
+        "Generic name": "Pyridoxine HCl",
+        "keyword": [
+            "B6-50",
+            "BESIX"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "50",
+            "100"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Amoxycillin & clavulanic acid (Augmentin®, Cavumox®)",
+        "Type": "Antibiotics",
+        "Trade name": "Augmentin",
+        "Generic name": "Amoxycillin & clavulanic acid",
+        "keyword": [
+            "Cavumox"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "625"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Amoxycillin & clavulanic acid (Augmentin SR®, Cavumox®, Curam solutab®)",
+        "Type": "Antibiotics",
+        "Trade name": "Augmentin SR",
+        "Generic name": "Amoxycillin & clavulanic acid",
+        "Note": "extended release",
+        "keyword": [
+            "Cavumox",
+            "Curam"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "62.5/1000"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Amoxycillin (Siamox®)",
+        "Type": "Antibiotics",
+        "Trade name": "Siamox",
+        "Generic name": "Amoxycillin",
+        "keyword": [
+            "Coamox"
+        ],
+        "Dosage form": "cap",
+        "dose": [
+            "250",
+            "500"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Ciprofloxacin (Cifloxin®, Ciprobay®)",
+        "Type": "Antibiotics",
+        "Trade name": "Cifloxin",
+        "Generic name": "Ciprofloxacin",
+        "keyword": [
+            "Ciprobay"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "250",
+            "500"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Norfloxacin (Norxacin®)",
+        "Type": "Antibiotics",
+        "Trade name": "Norxacin",
+        "Generic name": "Norfloxacin",
+        "Dosage form": "tab",
+        "dose": [
+            "100",
+            "400"
+        ],
+        "unit": "mg"
+    },
+    {
+        "Text": "Cefdinir (Omnicef®)",
+        "Type": "Antibiotics",
+        "Trade name": "Omnicef",
+        "Generic name": "Cefdinir",
+        "keyword": [
+            "Samnir"
+        ],
+        "Dosage form": "tab",
+        "dose": [
+            "100"
+        ],
+        "unit": "mg"
+    }
+]
