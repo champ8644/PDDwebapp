@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import MaskedInput from 'react-text-mask';
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import FormControl from "@material-ui/core/FormControl";
@@ -11,6 +12,48 @@ import Clear from "@material-ui/icons/Clear";
 import Check from "@material-ui/icons/Check";
 // core components
 import customInputStyle from "assets/jss/material-dashboard-react/components/customInputStyle.jsx";
+
+function TextMaskCustom(props) {
+  const { inputRef, ...other } = props;
+
+  var maskHN = (rawValue) => {
+    let length = rawValue.length;
+    var i,c=0;
+    for (i=0;i<length;i++) {
+      if (i==0) {
+        if (/[1-9]/.test(rawValue[i]))
+          c++;
+      } else {
+        if (/\d/.test(rawValue[i]))
+          c++;
+      }
+    }
+    length = c;
+    let arr = [/[1-9]/];
+    for (i=1;i<length;i++) {
+      if (i==length-2)
+        arr.push('/');
+      arr.push(/\d/);
+    }
+    return arr;
+  }
+
+  return (
+    <MaskedInput
+      {...other}
+      ref={ref => {
+        inputRef(ref ? ref.inputElement : null);
+      }}
+      mask={maskHN}
+      guide={false}
+      placeholderChar={'\u2000'}
+      showMask
+    />
+  );
+}
+TextMaskCustom.propTypes = {
+  inputRef: PropTypes.func.isRequired,
+};
 
 function CustomInput({ ...props }) {
   const {
@@ -37,9 +80,20 @@ function CustomInput({ ...props }) {
   const marginTop = classNames({
     [classes.marginTop]: labelText === undefined
   });
+
   var styleMargin = {};
-  if (props.noMargin)
+  if (props.noMargin) {
     styleMargin = {margin:"0 0 0 0"};
+  }
+
+  const [values, setValues] = React.useState({
+    textmask: '',
+  });
+
+  const handleChange = name => event => {
+    setValues({ ...values, [name]: event.target.value });
+  };
+
   return (
     <FormControl
       {...formControlProps}
@@ -56,6 +110,9 @@ function CustomInput({ ...props }) {
         </InputLabel>
       ) : null}
       <Input
+        value={values.textmask}
+        onChange={handleChange('textmask')}
+        inputComponent={TextMaskCustom}
         classes={{
           root: marginTop,
           disabled: classes.disabled,

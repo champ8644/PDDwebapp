@@ -8,6 +8,7 @@ import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
+import DemographicData from "views/DemographicData/DemographicData.jsx";
 import Tempapp from "views/Tempapp/Tempapp.jsx";
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import UserProfile from "views/UserProfile/UserProfile.jsx";
@@ -21,6 +22,13 @@ import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 import RTLPage from "views/RTLPage/RTLPage.jsx";
 
 const dashboardRoutes = [
+  {
+    path: "/demographicdata",
+    name: "Demographic Data",
+    icon: Person,
+    component: DemographicData,
+    layout: "/admin"
+  },
   {
     path: "/Tempapp",
     name: "Tempapp",
