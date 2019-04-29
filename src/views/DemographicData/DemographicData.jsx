@@ -43,10 +43,10 @@ const styles = {
 function UserProfile(props) {
   const { classes } = props;
   return (
-    <div style={{marginTop:"10px"}}>
+    <div style={{marginTop:"0px"}}>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={5} lg={4} m={0}>
-          <Card>
+        <GridItem xs={12} sm={6} md={5} lg={4}>
+          <Card noTopMargin>
             <CardBody>
               <HNInput
                 noMargin
@@ -67,7 +67,7 @@ function UserProfile(props) {
         <GridItem xs={12} sm={12} md={8}>
           <Card>
             <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
+              <h2 className={classes.cardTitleWhite}>Edit Profile</h2>
               <p className={classes.cardCategoryWhite}>Complete your profile</p>
             </CardHeader>
             <CardBody>
@@ -191,6 +191,22 @@ function UserProfile(props) {
                 Follow
               </Button>
             </CardBody>
+          </Card>
+        </GridItem>
+      </GridContainer>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={8}>
+          <Card>
+            <CardHeader color="warning">
+              <h2 className={classes.cardTitleWhite}>Medications</h2>
+              <p className={classes.cardCategoryWhite}>Complete the table</p>
+            </CardHeader>
+            <CardBody>
+              <p> hello world</p>
+            </CardBody>
+            <CardFooter>
+              <Button color="warning">Update Medications</Button>
+            </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>
