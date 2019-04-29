@@ -79,7 +79,8 @@ function CustomInput({ ...props }) {
     [classes.underline]: true
   });
   const marginTop = classNames({
-    [classes.marginTop]: labelText === undefined
+    //[classes.marginTop]: labelText === undefined
+    //classes.cssOutlinedInputHN
   });
 
   var styleMargin = {};
@@ -114,14 +115,15 @@ function CustomInput({ ...props }) {
         }}
         InputProps={{
           value: values.textmask,
+          style: {fontSize:"36px",borderColor:"yellow"},
           onChange: handleChange('textmask'),
           inputComponent: TextMaskCustom,
           classes: {
-            root: marginTop,
+            root: classes.cssOutlinedInputHN,
             disabled: classes.disabled,
             underline: underlineClasses,
-            focused: classes.cssFocused,
-            notchedOutline: classes.notchedOutline,
+            focused: classes.cssFocusedHN,
+            notchedOutline: classes.notchedOutlineHN,
           },
           ...inputProps
         }}

@@ -14,7 +14,7 @@ import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 
-import avatar from "assets/img/faces/marc.jpg";
+import avatar from "assets/img/faces/switt.jpg";
 
 const styles = {
   cardCategoryWhite: {
@@ -32,15 +32,20 @@ const styles = {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: "3px",
     textDecoration: "none"
+  },
+  inputHN: {
+    color: "green",
+    fontSize: "36px"
   }
 };
+
 
 function UserProfile(props) {
   const { classes } = props;
   return (
-    <div>
+    <div style={{marginTop:"10px"}}>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={4} lg={3}>
+        <GridItem xs={12} sm={6} md={5} lg={4} m={0}>
           <Card>
             <CardBody>
               <HNInput
@@ -49,8 +54,10 @@ function UserProfile(props) {
                 id="HN"
                 formControlProps={{
                   fullWidth: true,
-                  margin: "none"
+                  margin: "none",
+                  className: classes.inputHN
                 }}
+                className={classes.inputHN}
               />
             </CardBody>
           </Card>
@@ -176,11 +183,9 @@ function UserProfile(props) {
             </CardAvatar>
             <CardBody profile>
               <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
+              <h4 className={classes.cardTitle}>Switt Kongdachalert</h4>
               <p className={classes.description}>
-                Don't be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac ipsum orci. Vestibulum quis ornare elit, in ultricies quam. Suspendisse hendrerit libero posuere, venenatis purus eget, vulputate orci. Vivamus auctor venenatis sapien, ac lacinia sapien fermentum ut.
               </p>
               <Button color="primary" round>
                 Follow

@@ -35,8 +35,8 @@ const customInputStyle = {
     ...defaultFont,
     color: grayColor[3] + " !important",
     fontWeight: "400",
-    fontSize: "20px",
-    lineHeight: "1"
+    fontSize: "30px",
+    lineHeight: "1.42857"
   },
   labelRootError: {
     color: dangerColor[0]
@@ -53,16 +53,26 @@ const customInputStyle = {
     width: "24px",
     height: "24px",
     textAlign: "center",
-    pointerEvents: "none"
+    pointerEvents: "none",
+  },
+  cssOutlinedInputHN: {
+    '&$cssFocusedHN $notchedOutlineHN': {
+      borderColor: '#9c27b0' + ' !important',
+    }
+  },
+  cssFocusedHN: {
+  },
+  notchedOutlineHN: {
+    borderWidth: '1px',
   },
   marginTop: {
-    marginTop: "0px"
+    marginTop: "0px",
   },
   formControl: {
     paddingBottom: "10px",
     margin: "10px 0 0 0",
     position: "relative",
-    verticalAlign: "unset",
+    verticalAlign: "unset"
   },
 };
 

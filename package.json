@@ -1,7 +1,7 @@
 {
   "name": "material-dashboard-react",
   "version": "1.6.0",
-  "description": "Material Dashboard React. Coded by Creative Tim",
+  "description": "Parkinson's disease Diary",
   "private": false,
   "main": "dist/index.js",
   "dependencies": {
@@ -10,6 +10,7 @@
     "autosuggest-highlight": "^3.1.1",
     "chartist": "0.10.1",
     "classnames": "2.2.6",
+    "cross-env": "^5.2.0",
     "firebase": "^5.10.1",
     "firebase-admin": "^7.3.0",
     "global": "^4.3.2",
@@ -46,7 +47,7 @@
     "url": "git+https://github.com/creativetimofficial/material-dashboard-react.git"
   },
   "keywords": [],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "author": "Champ Varis Ratanasirisawad",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/creativetimofficial/material-dashboard-react/issues"
