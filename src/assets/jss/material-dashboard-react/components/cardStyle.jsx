@@ -34,6 +34,9 @@ const cardStyle = {
       marginTop: "0px",
       paddingTop: "0px"
     }
+  },
+  noTopMargin: {
+    marginTop: "0px"
   }
 };
 
