@@ -29,6 +29,7 @@
     "react-scripts": "2.1.5",
     "react-swipeable-views": "0.13.1",
     "react-text-mask": "^5.4.3",
+    "video-react": "^0.13.6",
     "yarn": "^1.15.2"
   },
   "scripts": {

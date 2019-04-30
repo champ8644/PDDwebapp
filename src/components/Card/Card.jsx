@@ -20,7 +20,10 @@ function Card({ ...props }) {
     chart,
     noTopMargin,
     ...rest
-  } = props;
+  } = props;/*
+  console.log("CARDCLASS IS : ");
+  console.log(props);
+  console.log(classes);*/
   const cardClasses = classNames({
     [classes.card]: true,
     [classes.cardPlain]: plain,
@@ -28,7 +31,18 @@ function Card({ ...props }) {
     [classes.cardChart]: chart,
     [classes.noTopMargin]: noTopMargin,
     [className]: className !== undefined
+  });/*
+  console.log("CARDCLASS IS : ");
+  console.log(classes);
+  console.log({
+    [classes.card]: true,
+    [classes.cardPlain]: plain,
+    [classes.cardProfile]: profile,
+    [classes.cardChart]: chart,
+    [classes.noTopMargin]: noTopMargin,
+    [className]: className !== undefined
   });
+  console.log(cardClasses);*/
   return (
     <div className={cardClasses} {...rest}>
       {children}

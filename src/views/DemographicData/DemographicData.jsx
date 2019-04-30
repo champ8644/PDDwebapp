@@ -13,8 +13,12 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-
+// import views
+import MedicationTable from "views/DemographicData/MedicationTable.jsx";
+import UserInputs from "views/DemographicData/UserInputs.jsx";
+// import pictures
 import avatar from "assets/img/faces/switt.jpg";
+import switt from "assets/img/switt.gif"
 
 const styles = {
   cardCategoryWhite: {
@@ -63,116 +67,16 @@ function UserProfile(props) {
           </Card>
         </GridItem>
       </GridContainer>
-      <GridContainer>
+      <GridContainer >
         <GridItem xs={12} sm={12} md={8}>
-          <Card>
-            <CardHeader color="primary">
-              <h2 className={classes.cardTitleWhite}>Edit Profile</h2>
-              <p className={classes.cardCategoryWhite}>Complete your profile</p>
-            </CardHeader>
-            <CardBody>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={5}>
-                  <CustomInput
-                    labelText="Company (disabled)"
-                    id="company-disabled"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                    inputProps={{
-                      disabled: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={3}>
-                  <CustomInput
-                    labelText="Username"
-                    id="username"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="Email address"
-                    id="email-address"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="First Name"
-                    id="first-name"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Last Name"
-                    id="last-name"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="City"
-                    id="city"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="Country"
-                    id="country"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="Postal Code"
-                    id="postal-code"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={12}>
-                  <InputLabel style={{ color: "#AAAAAA" }}>About me</InputLabel>
-                  <CustomInput
-                    labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                    id="about-me"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                    inputProps={{
-                      multiline: true,
-                      rows: 5
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-            </CardBody>
-            <CardFooter>
-              <Button color="primary">Update Profile</Button>
-            </CardFooter>
-          </Card>
+          <GridContainer direction="column">
+              <GridItem xs={12}>
+                <UserInputs />
+              </GridItem>
+              <GridItem xs={12}>
+                <MedicationTable />
+              </GridItem>
+          </GridContainer>
         </GridItem>
         <GridItem xs={12} sm={12} md={4}>
           <Card profile>
@@ -181,34 +85,17 @@ function UserProfile(props) {
                 <img src={avatar} alt="..." />
               </a>
             </CardAvatar>
-            <CardBody profile>
+            <CardBody profile noTopMargin>
               <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
               <h4 className={classes.cardTitle}>Switt Kongdachalert</h4>
-              <p className={classes.description}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac ipsum orci. Vestibulum quis ornare elit, in ultricies quam. Suspendisse hendrerit libero posuere, venenatis purus eget, vulputate orci. Vivamus auctor venenatis sapien, ac lacinia sapien fermentum ut.
-              </p>
+              <img width='100%' src={switt} alt="switt is excited" />
               <Button color="primary" round>
                 Follow
               </Button>
             </CardBody>
           </Card>
         </GridItem>
-      </GridContainer>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={8}>
-          <Card>
-            <CardHeader color="warning">
-              <h2 className={classes.cardTitleWhite}>Medications</h2>
-              <p className={classes.cardCategoryWhite}>Complete the table</p>
-            </CardHeader>
-            <CardBody>
-              <p> hello world</p>
-            </CardBody>
-            <CardFooter>
-              <Button color="warning">Update Medications</Button>
-            </CardFooter>
-          </Card>
-        </GridItem>
+        
       </GridContainer>
     </div>
   );
