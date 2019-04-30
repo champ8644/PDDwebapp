@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -89,9 +90,11 @@ function UserProfile(props) {
               <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
               <h4 className={classes.cardTitle}>Switt Kongdachalert</h4>
               <img width='100%' src={switt} alt="switt is excited" />
-              <Button color="primary" round>
-                Follow
-              </Button>
+              <a href='https://www.facebook.com/swittk/'>
+                <Button color="primary" round>
+                  Follow
+                </Button>
+              </a>
             </CardBody>
           </Card>
         </GridItem>
