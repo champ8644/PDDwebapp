@@ -17,7 +17,6 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import PropTypes from "prop-types";
 
 import {Formik} from "formik";
-//import initialValue from "./UserInputHelper";
 import * as Yup from "yup";
 
 
@@ -40,13 +39,6 @@ const styles = {
   }
 };
 
-const PatientInfoSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .required('Required'),
-  lastName: Yup.string()
-    .required('Required'),
-});
-
 const initialValue = { 
   prefix: "", firstName: "", middleName: "", lastName: "", sex: "",
   birthDate: "", age: "", maritalStatus: "", occupation: "", 
@@ -56,6 +48,13 @@ const initialValue = {
   diagnosis: "", subtypeDiagnosis: "", TMSE: "", MOCA: "", PDQ8: "", HY: "", UPDRS: [], WOQ9: "", 
   dexterityIndex: ""
 };
+
+const PatientInfoSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .required('Required'),
+  lastName: Yup.string()
+    .required('Required'),
+});
 
 function UserInputs(props) {
 
