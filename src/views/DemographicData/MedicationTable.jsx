@@ -18,6 +18,8 @@ import CardFooter from "components/Card/CardFooter.jsx";
 import SimpleTable from "views/DemographicData/SimpleTable.jsx";
 import TestTable from "views/DemographicData/TestTable.jsx";
 import MedicationGrid from "views/DemographicData/MedicationGrid.jsx";
+import DataGrid from "views/DemographicData/DataGrid.jsx";
+//import SampleMaterialUI from "views/DemographicData/SampleMaterialUI.jsx";
 
 const styles = {
   cardCategoryWhite: {
@@ -42,31 +44,30 @@ const styles = {
   }
 };
 
-
-function MedicationTable ({ ...props }) {
+function MedicationTable({ ...props }) {
   const { classes } = props;
   const [tableHeader, setTableHeader] = useState([]);
   const [tableFront, setTableFront] = useState([]);
   const [tableCells, setTableCells] = useState([]);
-    return (
-      <Card>
-        <CardHeader color="rose">
-          <h2 className={classes.cardTitleWhite}>Medications</h2>
-          <p className={classes.cardCategoryWhite}>Complete the table</p>
-        </CardHeader>
-        <CardBody>
-          <div style={{overflowY:'hidden',overflowX:'auto'}}>
-            <SimpleTable />
-          </div>
-                {/*
+  return (
+    <Card>
+      <CardHeader color="rose">
+        <h2 className={classes.cardTitleWhite}>Medications</h2>
+        <p className={classes.cardCategoryWhite}>Complete the table</p>
+      </CardHeader>
+      <CardBody>
+        <div style={{ overflowY: "hidden", overflowX: "auto" }}>
+          <SimpleTable />
+        </div>
+        {/*
           <TableMed tableHeader={tableHeader} tableFront={tableFront} tableCells={tableCells}/>
 */}
-        </CardBody>
-        <CardFooter>
-          <Button color="rose">Update Medications</Button>
-        </CardFooter>
-      </Card>
-    );
+      </CardBody>
+      <CardFooter>
+        <Button color="rose">Update Medications</Button>
+      </CardFooter>
+    </Card>
+  );
 }
 
 export default withStyles(styles)(MedicationTable);

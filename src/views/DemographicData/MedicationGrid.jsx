@@ -1,12 +1,12 @@
 import {
-    warningColor,
-    primaryColor,
-    dangerColor,
-    successColor,
-    infoColor,
-    roseColor,
-    grayColor,
-    defaultFont
+  warningColor,
+  primaryColor,
+  dangerColor,
+  successColor,
+  infoColor,
+  roseColor,
+  grayColor,
+  defaultFont
 } from "assets/jss/material-dashboard-react.jsx";
 
 import React, { useState } from "react";
@@ -22,37 +22,35 @@ const styles = {};
 
 class ColorEditor extends React.Component {
   constructor(props) {
-      super(props);
-      this.state = { color: props.value };
+    super(props);
+    this.state = { color: props.value };
   }
 
   getValue() {
-      return { labelColour: this.state.color };
+    return { labelColour: this.state.color };
   }
 
   getInputNode() {
-      return ReactDOM.findDOMNode(this).getElementsByTagName("input")[0];
+    return ReactDOM.findDOMNode(this).getElementsByTagName("input")[0];
   }
 
   handleChangeComplete = color => {
-      this.setState({ color: color.hex }, () => this.props.onCommit());
+    this.setState({ color: color.hex }, () => this.props.onCommit());
   };
 
   render() {
-      return (
-        {/*
+    return {
+      /*
       <SketchPicker
           color={this.state.color}
           onChange={this.handleChangeComplete}
       />
-      */}
-      );
+      */
+    };
   }
 }
 
-const columns = [
-  { key: "Medications", name: "ID" },
-];
+const columns = [{ key: "Medications", name: "ID" }];
 
 const rows = [
   { id: 0, title: "Task 1", issueType: "Bug", labelColour: "#1D1D1F" },
@@ -60,31 +58,29 @@ const rows = [
   { id: 2, title: "Task 3", issueType: "Epic", labelColour: "1D1D1F" }
 ];
 
-function MedicationGrid (){
-  const [state, setState] = useState({rows});
+function MedicationGrid() {
+  const [state, setState] = useState({ rows });
 
   const onGridRowsUpdated = ({ fromRow, toRow, updated }) => {
-      setState(state => {
+    setState(state => {
       const rows = state.rows.slice();
       for (let i = fromRow; i <= toRow; i++) {
-          rows[i] = { ...rows[i], ...updated };
+        rows[i] = { ...rows[i], ...updated };
       }
       return { rows };
-      });
+    });
   };
 
   return (
     <>
-      <div>
-
-      </div>
+      <div />
       <div>
         <ReactDataGrid
-        columns={columns}
-        rowGetter={i => state.rows[i]}
-        rowsCount={3}
-        onGridRowsUpdated={onGridRowsUpdated}
-        enableCellSelect={true}
+          columns={columns}
+          rowGetter={i => state.rows[i]}
+          rowsCount={3}
+          onGridRowsUpdated={onGridRowsUpdated}
+          enableCellSelect={true}
         />
       </div>
     </>

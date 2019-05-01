@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -19,7 +19,7 @@ import MedicationTable from "views/DemographicData/MedicationTable.jsx";
 import UserInputs from "views/DemographicData/UserInputs.jsx";
 // import pictures
 import avatar from "assets/img/faces/switt.jpg";
-import switt from "assets/img/switt.gif"
+import switt from "assets/img/switt.gif";
 
 const styles = {
   cardCategoryWhite: {
@@ -44,11 +44,10 @@ const styles = {
   }
 };
 
-
 function UserProfile(props) {
   const { classes } = props;
   return (
-    <div style={{marginTop:"0px"}}>
+    <div style={{ marginTop: "0px" }}>
       <GridContainer>
         <GridItem xs={12} sm={6} md={5} lg={4}>
           <Card noTopMargin>
@@ -68,15 +67,15 @@ function UserProfile(props) {
           </Card>
         </GridItem>
       </GridContainer>
-      <GridContainer >
+      <GridContainer>
         <GridItem xs={12} sm={12} md={8}>
           <GridContainer direction="column">
-              <GridItem>
-                <UserInputs />
-              </GridItem>
-              <GridItem style={{maxWidth:'100%'}}>
-                <MedicationTable />
-              </GridItem>
+            <GridItem>
+              <UserInputs />
+            </GridItem>
+            <GridItem style={{ maxWidth: "100%" }}>
+              <MedicationTable />
+            </GridItem>
           </GridContainer>
         </GridItem>
         <GridItem xs={12} sm={12} md={4}>
@@ -89,8 +88,8 @@ function UserProfile(props) {
             <CardBody profile noTopMargin>
               <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
               <h4 className={classes.cardTitle}>Switt Kongdachalert</h4>
-              <img width='100%' src={switt} alt="switt is excited" />
-              <a href='https://www.facebook.com/swittk/'>
+              <img width="100%" src={switt} alt="switt is excited" />
+              <a href="https://www.facebook.com/swittk/">
                 <Button color="primary" round>
                   Follow
                 </Button>
@@ -98,7 +97,6 @@ function UserProfile(props) {
             </CardBody>
           </Card>
         </GridItem>
-        
       </GridContainer>
     </div>
   );
