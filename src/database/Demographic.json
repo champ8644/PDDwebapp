@@ -1,9 +1,0 @@
-[
-{"type":"header","version":"4.7.0","comment":"Export to JSON plugin for PHPMyAdmin"},
-{"type":"database","name":"pddiary"},
-{"type":"table","name":"demographic","database":"pddiary","data":
-[
-
-]
-}
-]
