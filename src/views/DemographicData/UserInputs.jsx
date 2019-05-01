@@ -2,7 +2,7 @@
 import React, { useCallback } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-import Select from "@material-ui/core/Select";
+import Select from "components/Select/Select.jsx";
 import MenuItem from "@material-ui/core/MenuItem";
 
 // core components
@@ -50,6 +50,8 @@ const initialValue = {
 };
 
 const PatientInfoSchema = Yup.object().shape({
+  prefix: Yup.string()
+    .required('Required'),
   firstName: Yup.string()
     .required('Required'),
   lastName: Yup.string()
@@ -89,7 +91,7 @@ function UserInputs(props) {
           <CardBody>
             <GridContainer>
               <GridItem xs={12} sm={12} md={3}>
-                <Select name="prefix" value={values.prefix} onChange={handleChange}>
+                <Select label="Prefix" error={errors.prefix && touched.prefix} name="prefix" value={values.prefix} onChange={handleChange}>
                   <MenuItem value={"นาย"}>นาย</MenuItem>
                   <MenuItem value={"นาง"}>นาง</MenuItem>
                   <MenuItem value={"นางสาว"}>นางสาว</MenuItem>
