@@ -55,9 +55,9 @@ function MedicationTable ({ ...props }) {
           <p className={classes.cardCategoryWhite}>Complete the table</p>
         </CardHeader>
         <CardBody>
-          <div style={{width:'fill',overflowX:'auto'}}>
-            <MedicationGrid />
-            </div>
+          <div style={{overflowY:'hidden',overflowX:'auto'}}>
+            <SimpleTable />
+          </div>
                 {/*
           <TableMed tableHeader={tableHeader} tableFront={tableFront} tableCells={tableCells}/>
 */}

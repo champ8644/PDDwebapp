@@ -22,7 +22,10 @@ const styles = theme => ({
   	width: '100%',
   	minWidth: '700px', // added code
     overflow: 'hidden',	// added code
+    tableLayout: 'fixed',
+    wordWrap: 'break-word',
   },
+  
 });
 
 let id = 0;

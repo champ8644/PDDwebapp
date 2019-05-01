@@ -74,7 +74,7 @@ function UserProfile(props) {
               <GridItem>
                 <UserInputs />
               </GridItem>
-              <GridItem>
+              <GridItem style={{maxWidth:'100%'}}>
                 <MedicationTable />
               </GridItem>
           </GridContainer>
