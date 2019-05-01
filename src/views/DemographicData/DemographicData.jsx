@@ -71,10 +71,10 @@ function UserProfile(props) {
       <GridContainer >
         <GridItem xs={12} sm={12} md={8}>
           <GridContainer direction="column">
-              <GridItem xs={12}>
+              <GridItem>
                 <UserInputs />
               </GridItem>
-              <GridItem xs={12}>
+              <GridItem>
                 <MedicationTable />
               </GridItem>
           </GridContainer>

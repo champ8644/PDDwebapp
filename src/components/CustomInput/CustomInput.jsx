@@ -22,7 +22,6 @@ function CustomInput({ ...props }) {
     inputProps,
     error,
     success,
-    noMargins
   } = props;
 
   const labelClasses = classNames({
@@ -38,13 +37,10 @@ function CustomInput({ ...props }) {
     [classes.marginTop]: labelText === undefined
   });
   var styleMargin = {};
-  if (props.noMargin)
-    styleMargin = {margin:"0 0 0 0"};
   return (
     <FormControl
       {...formControlProps}
       className={formControlProps.className + " " + classes.formControl}
-      style={styleMargin}
     >
       {labelText !== undefined ? (
         <InputLabel

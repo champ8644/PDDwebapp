@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -13,6 +13,11 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardAvatar from "components/Card/CardAvatar.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
+// custom components
+//import TableMed from "components/TableChamp/TableMed.jsx";
+import SimpleTable from "views/DemographicData/SimpleTable.jsx";
+import TestTable from "views/DemographicData/TestTable.jsx";
+import MedicationGrid from "views/DemographicData/MedicationGrid.jsx";
 
 const styles = {
   cardCategoryWhite: {
@@ -37,19 +42,28 @@ const styles = {
   }
 };
 
+
 function MedicationTable ({ ...props }) {
   const { classes } = props;
+  const [tableHeader, setTableHeader] = useState([]);
+  const [tableFront, setTableFront] = useState([]);
+  const [tableCells, setTableCells] = useState([]);
     return (
       <Card>
-        <CardHeader color="warning">
+        <CardHeader color="rose">
           <h2 className={classes.cardTitleWhite}>Medications</h2>
           <p className={classes.cardCategoryWhite}>Complete the table</p>
         </CardHeader>
         <CardBody>
-          <p> hello world </p>
+          <div style={{width:'fill',overflowX:'auto'}}>
+            <MedicationGrid />
+            </div>
+                {/*
+          <TableMed tableHeader={tableHeader} tableFront={tableFront} tableCells={tableCells}/>
+*/}
         </CardBody>
         <CardFooter>
-          <Button color="warning">Update Medications</Button>
+          <Button color="rose">Update Medications</Button>
         </CardFooter>
       </Card>
     );
