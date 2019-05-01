@@ -1,0 +1,45 @@
+<svg id="Group_147" data-name="Group 147" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="194.5" height="191.505" viewBox="0 0 194.5 191.505">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.956" y1="0.657" x2="0.586" y2="0.055" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f697c3"/>
+      <stop offset="1" stop-color="#d55695"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.622" y1="1.374" x2="0.632" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#58596d"/>
+      <stop offset="1" stop-color="#27253b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.226" y1="0.5" x2="0.899" y2="0.658" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#c6c6c6"/>
+    </linearGradient>
+    <filter id="Intersection_8" x="76.371" y="44.686" width="118.129" height="146.819" filterUnits="userSpaceOnUse">
+      <feOffset dx="-7" dy="-10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11.5" result="blur"/>
+      <feFlood flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-4" x1="0.5" y1="0.089" x2="2.122" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ec77ad"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.5" y1="0.425" x2="0.5" y2="0.933" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2f2d43" stop-opacity="0.188"/>
+      <stop offset="1" stop-color="#444358" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_271" data-name="Rectangle 271" width="167" height="167" rx="32" fill="url(#linear-gradient)"/>
+  <path id="Intersection_10" data-name="Intersection 10" d="M46.294,88.053,0,103.376V5.155A31.853,31.853,0,0,1,17.423,0H95.416V103.376Z" transform="translate(14.577 0)" fill="url(#linear-gradient-2)"/>
+  <g id="Group_143" data-name="Group 143" transform="translate(14.486 109.948)" opacity="0.28">
+    <rect id="Rectangle_277" data-name="Rectangle 277" width="93.984" height="4" transform="translate(0 27.8)" fill="#ffe0ee"/>
+    <rect id="Rectangle_280" data-name="Rectangle 280" width="93.984" height="4" transform="translate(0 14.829)" fill="#ffe0ee"/>
+    <rect id="Rectangle_281" data-name="Rectangle 281" width="55.304" height="4" transform="translate(0 2.723)" fill="#ffe0ee"/>
+    <rect id="Rectangle_278" data-name="Rectangle 278" width="93.984" height="4" transform="translate(0 39.906)" fill="#ffe0ee" opacity="0"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Intersection_8)">
+    <path id="Intersection_8-2" data-name="Intersection 8" d="M17.932,77.227c-13.258-7.509-15.481-19.6-10.816-28.8,4.852-7.366,20.489-8.713,33.69-25.38C48.288,13.6,51.715,7.643,54.016-.592V45.227a32,32,0,0,1-32,32Z" transform="translate(112.98 89.78)" fill="url(#linear-gradient-3)"/>
+  </g>
+  <text id="PD" transform="translate(20 76)" fill="#fff" font-size="72" font-family="HammersmithOne-Regular, HammersmithOne"><tspan x="0" y="0">PD</tspan></text>
+  <path id="Intersection_9" data-name="Intersection 9" d="M.612,78.488c2.741-2.073,8.2-6.893,13.707-15.741C23.4,48.162,30.01,35.021,34.922,8.365c.485-2.631.913-5.257,1.291-7.852V46.488a32,32,0,0,1-32,32Z" transform="translate(130.788 88.512)" fill="url(#linear-gradient-4)"/>
+  <rect id="Rectangle_291" data-name="Rectangle 291" width="90" height="28" transform="translate(20 16.915)" opacity="0.5" fill="url(#linear-gradient-5)"/>
+</svg>
