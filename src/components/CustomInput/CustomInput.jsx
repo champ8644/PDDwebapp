@@ -22,7 +22,7 @@ function CustomInput({ ...props }) {
     inputProps,
     error,
     success,
-    noMargins
+    noMargin
   } = props;
 
   const labelClasses = classNames({
@@ -83,7 +83,8 @@ CustomInput.propTypes = {
   inputProps: PropTypes.object,
   formControlProps: PropTypes.object,
   error: PropTypes.bool,
-  success: PropTypes.bool
+  success: PropTypes.bool,
+  noMargin: PropTypes.bool
 };
 
 export default withStyles(customInputStyle)(CustomInput);
