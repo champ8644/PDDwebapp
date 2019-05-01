@@ -43,8 +43,9 @@ function CustomInput({ ...props }) {
     <FormControl
       {...formControlProps}
       className={
-        formControlProps &&
-        formControlProps.className + " " + classes.formControl
+        (formControlProps && formControlProps.className) +
+        " " +
+        classes.formControl
       }
       style={styleMargin}
     >
