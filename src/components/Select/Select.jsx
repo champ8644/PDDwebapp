@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -6,8 +7,7 @@ import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 
 import Clear from "@material-ui/icons/Clear";
-import ArrowDropDown from "@material-ui/icons/ArrowDropDown"
-import Check from "@material-ui/icons/Check";
+import ArrowDropDown from "@material-ui/icons/ArrowDropDown";
 
 import customInputStyle from "assets/jss/material-dashboard-react/components/customInputStyle.jsx";
 import classNames from "classnames";
