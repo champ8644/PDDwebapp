@@ -2,19 +2,21 @@
 import React, { useCallback } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-import Select from "components/Select/Select.jsx";
 import MenuItem from "@material-ui/core/MenuItem";
 
 // core components
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
-import CustomInput from "components/CustomInput/MemoizedInput.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 import PropTypes from "prop-types";
+
+// custom components
+import Select from "components/Select/Select.jsx";
+import CustomInput from "components/CustomInput/MemoizedInput.jsx";
 
 import {Formik} from "formik";
 import * as Yup from "yup";
@@ -61,8 +63,7 @@ const PatientInfoSchema = Yup.object().shape({
 function UserInputs(props) {
 
   const { classes } = props;
-
-
+  
   const handleSubmit = useCallback( ( values, {setSubmitting}) => {
     console.log(values);
   },[]);
@@ -107,7 +108,10 @@ function UserInputs(props) {
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
-                <CustomInput key={2} labelText="Sex" error={errors.sex && touched.sex} inputProps={{name: 'sex',value:  values.sex, onChange: handleChange, onBlur:handleBlur}}/>
+                <Select label="Sex" error={errors.sex && touched.sex} name="sex" value={values.sex} onChange={handleChange}>
+                  <MenuItem value={"ชาย"}>ชาย</MenuItem>
+                  <MenuItem value={"หญิง"}>หญิง</MenuItem>                  
+                </Select>
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
@@ -183,7 +187,7 @@ function UserInputs(props) {
               </GridItem> 
 
               <GridItem xs={12} sm={12} md={3}>
-                <CustomInput labelText="SleepTime"  error={errors.sleepTime && touched.sleepTime}inputProps={{name: 'sleepTime',value:  values.sleepTime, onChange: handleChange, onBlur: handleBlur }}/>
+                <CustomInput labelText="SleepTime"  error={errors.sleepTime && touched.sleepTime} inputProps={{name: 'sleepTime',value:  values.sleepTime, onChange: handleChange, onBlur: handleBlur }}/>
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
