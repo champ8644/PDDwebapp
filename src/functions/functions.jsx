@@ -18,5 +18,8 @@ const isNumber = x => {
 const isFraction = x => {
   return /^\d*[¼½¾]$/.test(x);
 };
-
-module.exports = { ttEpo, epotT, isNumber, isFraction };
+const epotStr = x => {
+  let y = epotT(x);
+  return y.hr + ':' + ('00' + y.min).slice(-2);
+};
+module.exports = { ttEpo, epotT, isNumber, isFraction, epotStr };

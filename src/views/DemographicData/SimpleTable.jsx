@@ -1,3 +1,4 @@
+import DeleteColDialog from 'components/Dialog/DeleteColDialog.jsx';
 import DrugCell from 'components/TableChamp/DrugCell.jsx';
 import DrugFront from 'components/TableChamp/DrugFront.jsx';
 import DrugHeader from 'components/TableChamp/DrugHeader.jsx';
@@ -9,6 +10,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import { epotStr } from 'functions/functions.jsx';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
@@ -45,6 +47,14 @@ function SimpleTable(props) {
     dispatch({ type: 'setTableFront', payload: { x: x, value: e } });
   };
 
+  const ConfirmDelCol = x => {
+    dispatch({ type: 'deleteTableCol', payload: { x: x } });
+  };
+
+  const ConfirmDelRow = x => {
+    dispatch({ type: 'deleteTableRow', payload: { x: x } });
+  };
+
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -56,7 +66,13 @@ function SimpleTable(props) {
                 <DrugHeader
                   setTime={e => handleHeader(e, timeId)}
                   time={time}
-                  drugType='tab'
+                  DeleteColDialog={
+                    <DeleteColDialog
+                      timeId={timeId}
+                      timeString={epotStr(state.tableHeader[timeId])}
+                      ConfirmDelCol={() => ConfirmDelCol(timeId)}
+                    />
+                  }
                 />
               </TableCell>
             ))}
@@ -70,6 +86,7 @@ function SimpleTable(props) {
                   setValue={e => handleFront(e, rowId)}
                   value={state.tableFront[rowId]}
                   drugType='tab'
+                  DeleteRow={() => ConfirmDelRow(rowId)}
                 />
               </TableCell>
               {row.map((value, valueId) => (

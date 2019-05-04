@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { isFraction, isNumber } from 'functions/functions.jsx';
 
 import AddBox from '@material-ui/icons/AddBox';
@@ -5,7 +6,6 @@ import IndeterminateCheckBox from '@material-ui/icons/IndeterminateCheckBox';
 import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import PropTypes from 'prop-types';
-import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 // @material-ui/core components
@@ -31,6 +31,8 @@ const style = theme => ({
 
 function DrugCell(props) {
   const { classes, value, setValue, drugType } = props;
+
+  const [focus, setFocus] = useState(false);
 
   const toNumValue = x => {
     if (isNumber(x)) {
@@ -77,7 +79,7 @@ function DrugCell(props) {
   };
 
   const alterValue = x => {
-    setValue(toFracValue(toNumValue(value) + parseFloat(x)));
+    setValue(value + x);
   };
 
   const handleKeyDown = e => {
@@ -110,16 +112,21 @@ function DrugCell(props) {
   };
 
   const handleFocus = () => {
-    setValue(toNumValue(value));
+    setFocus(true);
   };
 
   const handleBlur = () => {
-    setValue(toFracValue(value));
+    setFocus(false);
   };
 
   const handleClick = x => {
     // to do: make button ripple
     alterValue(x);
+  };
+
+  const handleValue = () => {
+    if (focus) return toNumValue(value);
+    return toFracValue(value);
   };
 
   return (
@@ -134,7 +141,7 @@ function DrugCell(props) {
         <Input
           id='adornment-password'
           className={classes.inputCenter}
-          value={value}
+          value={handleValue()}
           onChange={handleOnChange}
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}

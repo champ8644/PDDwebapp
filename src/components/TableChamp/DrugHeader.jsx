@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import { epotT, ttEpo } from 'functions/functions.jsx';
+import { epotStr, ttEpo } from 'functions/functions.jsx';
 
-import Delete from '@material-ui/icons/Delete';
 import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
+import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 // @material-ui/core components
@@ -28,7 +27,7 @@ const style = theme => ({
 });
 
 function DrugHeader(props) {
-  const { classes, time, setTime } = props;
+  const { classes, time, setTime, DeleteColDialog } = props;
 
   const alterValue = x => {
     let t = ttEpo(x) + time;
@@ -61,38 +60,27 @@ function DrugHeader(props) {
     setTime(e.target.value);
   };
 
-  const handleClick = x => {
-    // to do: make button ripple
-    alterValue(x);
-  };
-
-  const parseToTime = x => {
-    let y = epotT(x);
-    return y.hr + ':' + ('00' + y.min).slice(-2);
-  };
-
   return (
     <div className={classes.root}>
       <div>
         <Input
           id='adornment-password'
           className={classes.inputCenter}
-          value={parseToTime(time)}
+          value={epotStr(time)}
           onChange={handleOnChange}
           onKeyDown={handleKeyDown}
           inputProps={{ style: { textAlign: 'center' } }}
         />
       </div>
-      <div>
-        <Delete className={classes.icon} onClick={() => handleClick(1)} />
-      </div>
+      {DeleteColDialog}
     </div>
   );
 }
 
 DrugHeader.propTypes = {
+  DeleteColDialog: PropTypes.element.isRequired,
   classes: PropTypes.any,
-  drugType: PropTypes.any,
+  handleDeleteCol: PropTypes.object.isRequired,
   setTime: PropTypes.object.isRequired,
   time: PropTypes.number.isRequired
 };
