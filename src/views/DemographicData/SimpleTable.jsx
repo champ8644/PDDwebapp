@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import MedicationCell from 'components/TableChamp/MedicationCell.jsx';
 
 const styles = theme => ({
   root: {
@@ -19,11 +20,11 @@ const styles = theme => ({
   table: {
     marginBottom: '0',
 	  maxWidth: 'none',
-  	width: '100%',
-  	minWidth: '700px', // added code
+  	width: 'auto',
     overflow: 'hidden',	// added code
-    tableLayout: 'fixed',
-    wordWrap: 'break-word',
+    tableLayout: 'auto',
+    padding: '5px 5 5 5',
+    //wordWrap: 'break-word',
   },
   
 });
@@ -44,6 +45,11 @@ const rows = [
 
 function SimpleTable(props) {
   const { classes } = props;
+  const [cell, setCell] = useState({value:10});
+
+  const handleChange = (e) => {
+    setCell(e);
+  }
 
   return (
     <Paper className={classes.root}>
@@ -51,7 +57,9 @@ function SimpleTable(props) {
         <TableHead>
           <TableRow>
             <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
+            <TableCell align="center" padding="none">
+              <MedicationCell state={cell} setState={handleChange} drugType='tab'/>
+            </TableCell>
             <TableCell align="right">Fat (g)</TableCell>
             <TableCell align="right">Carbs (g)</TableCell>
             <TableCell align="right">Protein (g)</TableCell>

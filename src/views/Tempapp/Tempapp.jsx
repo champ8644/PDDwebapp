@@ -22,10 +22,10 @@ firebase.initializeApp({
   storageBucket: "pd-diary.appspot.com",
   messagingSenderId: "482238828132"
 });
-/*
+
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
-*/
+
 function Tempapp() {
   return (
     <div className="App">
