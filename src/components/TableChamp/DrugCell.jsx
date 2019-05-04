@@ -84,16 +84,16 @@ function DrugCell(props) {
     // arrow up/down button should select next/previous list element
     switch (e.key) {
       case 'ArrowLeft': // Left
-        alterValue(-1);
+        alterValue(-0.25);
         break;
       case 'ArrowUp': // Up
-        alterValue(0.25);
-        break;
-      case 'ArrowRight': // Right
         alterValue(1);
         break;
+      case 'ArrowRight': // Right
+        alterValue(0.25);
+        break;
       case 'ArrowDown': // Down
-        alterValue(-0.25);
+        alterValue(-1);
         break;
       case 'Enter':
         e.target.blur();

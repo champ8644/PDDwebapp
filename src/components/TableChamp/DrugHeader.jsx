@@ -1,9 +1,9 @@
-import { isFraction, isNumber } from 'functions/functions.jsx';
+import React, { useEffect } from 'react';
+import { epotT, ttEpo } from 'functions/functions.jsx';
 
 import Delete from '@material-ui/icons/Delete';
 import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
-import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 // @material-ui/core components
@@ -18,7 +18,7 @@ const style = theme => ({
     marginTop: theme.spacing.unit * 3
   },
   inputCenter: {
-    minWidth: '60px',
+    minWidth: '50px',
     textAlign: 'center'
   },
   icon: {
@@ -28,70 +28,28 @@ const style = theme => ({
 });
 
 function DrugHeader(props) {
-  const { classes, time, settime } = props;
-
-  const toNumValue = x => {
-    if (isNumber(x)) {
-      return parseFloat(x);
-    } else if (isFraction(x)) {
-      let str = x.slice(0, -1);
-      let lastchar = x.slice(-1);
-      let output = parseFloat(str, 10);
-      switch (lastchar) {
-        case '¼':
-          output += 0.25;
-          break;
-        case '½':
-          output += 0.5;
-          break;
-        case '¾':
-          output += 0.75;
-          break;
-      }
-      return parseFloat(output);
-    }
-  };
-
-  const toFracValue = x => {
-    if (isNumber(x)) {
-      let val = Math.round(x * 4) / 4;
-      let frac = Math.round(x * 4) % 4;
-      let output = '' + Math.floor(val);
-      switch (frac) {
-        case 1:
-          output += '¼';
-          break;
-        case 2:
-          output += '½';
-          break;
-        case 3:
-          output += '¾';
-          break;
-      }
-      return output;
-    } else if (isFraction(x)) {
-      return x;
-    }
-  };
+  const { classes, time, setTime } = props;
 
   const alterValue = x => {
-    settime(toFracValue(toNumValue(time) + parseFloat(x)));
+    let t = ttEpo(x) + time;
+    if (t < 0) t += ttEpo({ hr: 24 });
+    setTime(t);
   };
 
   const handleKeyDown = e => {
     // arrow up/down button should select next/previous list element
     switch (e.key) {
       case 'ArrowLeft': // Left
-        alterValue(-1);
+        alterValue({ hr: -1 });
         break;
       case 'ArrowUp': // Up
-        alterValue(0.25);
+        alterValue({ min: 15 });
         break;
       case 'ArrowRight': // Right
-        alterValue(1);
+        alterValue({ hr: 1 });
         break;
       case 'ArrowDown': // Down
-        alterValue(-0.25);
+        alterValue({ min: -15 });
         break;
       case 'Enter':
         e.target.blur();
@@ -100,16 +58,17 @@ function DrugHeader(props) {
   };
 
   const handleOnChange = e => {
-    if (isNumber(e.target.value) || isFraction(e.target.value)) {
-      settime(e.target.value);
-    } else {
-      settime(time);
-    }
+    setTime(e.target.value);
   };
 
   const handleClick = x => {
     // to do: make button ripple
     alterValue(x);
+  };
+
+  const parseToTime = x => {
+    let y = epotT(x);
+    return y.hr + ':' + ('00' + y.min).slice(-2);
   };
 
   return (
@@ -118,7 +77,7 @@ function DrugHeader(props) {
         <Input
           id='adornment-password'
           className={classes.inputCenter}
-          value={time}
+          value={parseToTime(time)}
           onChange={handleOnChange}
           onKeyDown={handleKeyDown}
           inputProps={{ style: { textAlign: 'center' } }}
@@ -134,8 +93,8 @@ function DrugHeader(props) {
 DrugHeader.propTypes = {
   classes: PropTypes.any,
   drugType: PropTypes.any,
-  settime: PropTypes.any,
-  time: PropTypes.any
+  setTime: PropTypes.object.isRequired,
+  time: PropTypes.number.isRequired
 };
 
 function areEqual(prevProps, nextProps) {
