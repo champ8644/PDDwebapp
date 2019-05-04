@@ -1,22 +1,22 @@
-import _ from "lodash";
-
-import React from "react";
-
-import { Mixins, IconButton } from "material-ui";
-const { StylePropable, StyleResizable } = Mixins;
-import {
-  Table,
-  TableHeaderColumn,
-  TableRow,
-  TableHeader,
-  TableRowColumn,
-  TableBody,
-  TableFooter
-} from "material-ui";
+import { IconButton, Mixins } from 'material-ui';
 import {
   NavigationArrowDropDown,
   NavigationArrowDropUp
-} from "material-ui/lib/svg-icons";
+} from 'material-ui/lib/svg-icons';
+import {
+  Table,
+  TableBody,
+  TableFooter,
+  TableHeader,
+  TableHeaderColumn,
+  TableRow,
+  TableRowColumn
+} from 'material-ui';
+
+import React from 'react';
+import _ from 'lodash';
+
+const { StylePropable, StyleResizable } = Mixins;
 
 export default React.createClass({
   propTypes: {
@@ -87,12 +87,12 @@ export default React.createClass({
       data = originalData;
     } else if (_.isArray(firstRow)) {
       throw new Error(
-        "Arrays of arrays not yet supported by Advanced Table, but should be easy to upgrade"
+        'Arrays of arrays not yet supported by Advanced Table, but should be easy to upgrade'
       );
     } else {
       // Assume that it's a single column array
       if (this.props.columns.length > 1) {
-        throw new Error("Number of columns does not match data");
+        throw new Error('Number of columns does not match data');
       }
       data = [];
       for (let row of originalData) {
@@ -154,16 +154,16 @@ export default React.createClass({
         <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
           <TableRow
             key={0}
-            style={{ color: "#000000", backgroundColor: "#CCCCCC" }}
+            style={{ color: '#000000', backgroundColor: '#CCCCCC' }}
           >
             {columns.map((field, index) => {
               if (!field.hidden) {
                 let sortIcon, columnStyle;
                 if (field.field === this.state.sort.field) {
                   if (this.state.sort.ascending) {
-                    sortIcon = <NavigationArrowDropDown viewBox="0 0 17 17" />;
+                    sortIcon = <NavigationArrowDropDown viewBox='0 0 17 17' />;
                   } else {
-                    sortIcon = <NavigationArrowDropUp viewBox="0 0 17 17" />;
+                    sortIcon = <NavigationArrowDropUp viewBox='0 0 17 17' />;
                   }
                 }
                 if (field.style) {
@@ -173,7 +173,7 @@ export default React.createClass({
                   );
                 } else {
                   columnStyle = this.mergeStyles(
-                    { fontSize: "16" },
+                    { fontSize: '16' },
                     this.props.baseHeaderStyle
                   );
                 }
@@ -184,7 +184,7 @@ export default React.createClass({
                     style={columnStyle}
                     tooltip={field.tooltip}
                   >
-                    <div style={{ height: "50px", lineHeight: "50px" }}>
+                    <div style={{ height: '50px', lineHeight: '50px' }}>
                       {field.label}
                       {sortIcon}
                     </div>
@@ -199,14 +199,14 @@ export default React.createClass({
           showRowHover={false}
           stripedRows={false}
           displayRowCheckbox={false}
-          style={{ backgroundColor: "#FFFFFF", color: "#AAAAAA" }}
+          style={{ backgroundColor: '#FFFFFF', color: '#AAAAAA' }}
         >
           {this.state.sortedData.map((detailRow, index) => {
             let row = (
               <TableRow
                 key={index}
                 selected={detailRow.selected}
-                style={{ color: "#000000" }}
+                style={{ color: '#000000' }}
               >
                 {columns.map((field, index) => {
                   let columnStyle;
@@ -214,9 +214,9 @@ export default React.createClass({
                     if (field.style) {
                       columnStyle = field.style;
                     } else {
-                      columnStyle = { fontSize: "16" };
+                      columnStyle = { fontSize: '16' };
                     }
-                    let fieldValue = detailRow[field.field] || "";
+                    let fieldValue = detailRow[field.field] || '';
                     return (
                       <TableRowColumn
                         style={this.getCellStyle(
@@ -233,10 +233,10 @@ export default React.createClass({
                   }
                 })}
                 <TableRowColumn
-                  key="rowActions"
+                  key='rowActions'
                   style={{ width: this.props.rowToolbarWidth }}
                 >
-                  {React.createElement(this.props.RowToolbarClass || "div", {
+                  {React.createElement(this.props.RowToolbarClass || 'div', {
                     parent: this.props.parent,
                     value: detailRow[this.props.valueField]
                   })}

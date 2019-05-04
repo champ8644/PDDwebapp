@@ -1,5 +1,5 @@
 {
-  "name": "material-dashboard-react",
+  "name": "parkinson_diary",
   "version": "1.6.0",
   "description": "Parkinson's disease Diary",
   "private": false,
@@ -74,7 +74,7 @@
   "devDependencies": {
     "eslint-config-prettier": "4.0.0",
     "eslint-plugin-prettier": "3.0.1",
-    "eslint-plugin-react-hooks": "^1.6.0",
+    "eslint-plugin-react-hooks": "^1.5.0",
     "react-hot-loader": "^4.8.4"
   }
 }
