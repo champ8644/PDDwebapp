@@ -44,7 +44,7 @@ function MedicationCell({ ...props }) {
 
   const toNumValue = (x) => {
     if (isNumber(x)) {
-      return x;
+      return parseFloat(x);
     } else if (isFraction(x)) {
       let str = x.slice(0,-1);
       let lastchar = x.slice(-1);
@@ -60,7 +60,7 @@ function MedicationCell({ ...props }) {
           output += .75;
           break;
       }
-      return output;
+      return parseFloat(output);
     }
   }
 
@@ -87,29 +87,29 @@ function MedicationCell({ ...props }) {
   }
 
   const alterValue = (x) => {
-    setState({value:toFracValue(toNumValue(state.value)+x)});
+    console.log({tNV:toNumValue(state.value),pF:parseFloat(x),sum:toNumValue(state.value)+parseFloat(x),tFV:toFracValue(toNumValue(state.value)+parseFloat(x))});
+    setState({value:toFracValue(toNumValue(state.value)+parseFloat(x))});
   }
 
   const handleKeyDown = (e) => {
     // arrow up/down button should select next/previous list element
-    if ((37 <= e.keyCode) && (e.keyCode <= 40)) {
-      let alt;
-      switch(e.keyCode) {
-        case 37: // Left
-          alt = 1;
+      switch(e.key) {
+        case "ArrowLeft": // Left
+          alterValue(-1);
           break;
-        case 38: // Up
-          alt = 0.25;
+        case "ArrowUp": // Up
+          alterValue(0.25);
           break;
-        case 39: // Right
-          alt = 1;
+        case "ArrowRight": // Right
+          alterValue(1);
           break;
-        case 40: // Down
-          alt = 0.25;
+        case "ArrowDown": // Down
+          alterValue(-0.25);
+          break;
+        case "Enter":
+          e.target.blur();
           break;
       }
-      alterValue(alt);
-    }
   }
 
   const handleOnChange = (e) => {
@@ -128,49 +128,52 @@ function MedicationCell({ ...props }) {
     setState({value:toFracValue(state.value)});
   }
 
+  const handleClick = (x) => {
+    // to do: make button ripple
+    alterValue(x);
+  }
+
   return (
-    <div>
-      <div className={classes.inputDoses}>
-        <div style={{ display: 'inline-flex' }}>
-          <div>
-              <IndeterminateCheckBox
-                className={classes.icon}
-                
-              />
-          </div>
-          <div>
-            <Input
-              id="adornment-password"
-              className={classes.input}
-              value={state.value}
-              onChange={handleOnChange}
-              onBlur={handleBlur}
-              onKeyDown={handleKeyDown}
-              onFocus={handleFocus}
-              endAdornment={
-                <InputAdornment position="end">
-                  {drugType}
-                </InputAdornment>
-              }
-            />
-          </div>
-          <div>
-            <AddBox
+    <div className={classes.inputDoses}>
+      <div style={{ display: 'inline-flex' }}>
+        <div>
+            <IndeterminateCheckBox
               className={classes.icon}
-              
+              onClick={()=>handleClick(-1)}
             />
-          </div>
+        </div>
+        <div>
+          <Input
+            id="adornment-password"
+            className={classes.input}
+            value={state.value}
+            onChange={handleOnChange}
+            onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
+            onFocus={handleFocus}
+            endAdornment={
+              <InputAdornment position="end">
+                {drugType}
+              </InputAdornment>
+            }
+          />
+        </div>
+        <div>
+          <AddBox
+            className={classes.icon}
+            onClick={()=>handleClick(1)}
+          />
         </div>
       </div>
     </div>
   );
 }
-/*
+
 MedicationCell.propTypes = {
-  state: PropTypes.function.isRequired,
-  setState: PropTypes.function.isRequired,
+  state: PropTypes.object.isRequired,
+  setState: PropTypes.object.isRequired,
   drugType: PropTypes.string.isRequired,
 };
-*/
+
 
 export default withStyles(style)(MedicationCell);
