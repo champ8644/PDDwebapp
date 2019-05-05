@@ -44,6 +44,7 @@ function MedicationTable({ ...props }) {
   const { classes } = props;
 
   const initialState = {
+    currentFocus: -1,
     tableHeader: [
       ttEpo({ hr: 8 }),
       ttEpo({ hr: 12 }),

@@ -63,6 +63,14 @@ function SimpleTable(props) {
     dispatch({ type: 'setRefHeaderFocus', payload: { refFunction: e, x: x } });
   };
 
+  const handleOnFocusHeader = x => {
+    dispatch({ type: 'headerFocusing', payload: { x: x } });
+  };
+
+  const handleOnBlurHeader = () => {
+    dispatch({ type: 'headerBluring' });
+  };
+
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -77,6 +85,8 @@ function SimpleTable(props) {
                   time={time}
                   display={state.tableHeaderDisplay[timeId]}
                   setRefFocus={e => handleRefFocus(e, timeId)}
+                  handleOnFocusState={() => handleOnFocusHeader(timeId)}
+                  handleOnBlurState={handleOnBlurHeader}
                   DeleteColDialog={
                     <DeleteDialog
                       id={timeId}

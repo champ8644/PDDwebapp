@@ -39,6 +39,8 @@ function DrugHeader(props) {
     setTime,
     setDisplay,
     setRefFocus,
+    handleOnFocusState,
+    handleOnBlurState,
     DeleteColDialog
   } = props;
 
@@ -53,15 +55,30 @@ function DrugHeader(props) {
     setTime(t);
   };
 
+  const validateValue = () => {
+    let str = colonization(display);
+    if (isValidDisplayTime(str)) {
+      let result = str.split(':');
+      result[0] = result[0] || 0;
+      result[1] = result[1] || 0;
+      confirmTime({
+        hr: parseInt(result[0]),
+        min: parseInt(result[1])
+      });
+    } else {
+      throw Error('handle on blur error (impossible) : ' + str);
+    }
+  };
+
   const handleKeyDown = e => {
     // arrow up/down button should select next/previous list element
     switch (e.key) {
       case 'ArrowUp': // Up
-        handleOnBlur();
+        validateValue();
         alterValue({ min: 15 });
         break;
       case 'ArrowDown': // Down
-        handleOnBlur();
+        validateValue();
         alterValue({ min: -15 });
         break;
       case 'Enter':
@@ -108,18 +125,8 @@ function DrugHeader(props) {
   };
 
   const handleOnBlur = () => {
-    let str = colonization(display);
-    if (isValidDisplayTime(str)) {
-      let result = str.split(':');
-      result[0] = result[0] || 0;
-      result[1] = result[1] || 0;
-      confirmTime({
-        hr: parseInt(result[0]),
-        min: parseInt(result[1])
-      });
-    } else {
-      throw Error('handle on blur error (impossible) : ' + str);
-    }
+    handleOnBlurState();
+    validateValue();
   };
 
   const addRefInput = () => {
@@ -139,6 +146,7 @@ function DrugHeader(props) {
           onChange={handleOnChange}
           onKeyDown={handleKeyDown}
           onBlur={handleOnBlur}
+          onFocus={handleOnFocusState}
           inputRef={addRefInput()}
           inputProps={{ style: { textAlign: 'center' } }}
         />
@@ -153,6 +161,8 @@ DrugHeader.propTypes = {
   classes: PropTypes.any,
   display: PropTypes.string.isRequired,
   handleDeleteCol: PropTypes.object.isRequired,
+  handleOnBlurState: PropTypes.object.isRequired,
+  handleOnFocusState: PropTypes.object.isRequired,
   setDisplay: PropTypes.object.isRequired,
   setRefFocus: PropTypes.object.isRequired,
   setTime: PropTypes.object.isRequired,

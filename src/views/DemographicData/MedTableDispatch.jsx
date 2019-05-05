@@ -14,7 +14,7 @@ function sortByColumn(newState) {
     currentFocus: -1,
     tableHeader: [],
     tableHeaderDisplay: [],
-    tableHeaderFocus: [],
+    tableHeaderFocus: [...newState.tableHeaderFocus],
     tableFront: [],
     tableCell: []
   };
@@ -25,8 +25,6 @@ function sortByColumn(newState) {
   for (i = 0; i < sortrepresent.length; i++) {
     newStateSorted.tableHeader[i] =
       newState.tableHeader[sortrepresent[i].index];
-    newStateSorted.tableHeaderFocus[i] =
-      newState.tableHeaderFocus[sortrepresent[i].index];
     newStateSorted.tableHeaderDisplay[i] =
       newState.tableHeaderDisplay[sortrepresent[i].index];
     for (let j = 0; j < newState.tableFront.length; j++) {
@@ -35,8 +33,12 @@ function sortByColumn(newState) {
       );
     }
   }
+  console.log('newState.currentFocus: ', newState.currentFocus);
+  console.log('newStateSorted.currentFocus: ', newStateSorted.currentFocus);
   if (newState.currentFocus > 0) {
     newStateSorted.currentFocus = sortrepresent[newState.currentFocus].index;
+    console.log('newState.currentFocus: ', newState.currentFocus);
+    console.log('newStateSorted.currentFocus: ', newStateSorted.currentFocus);
     if (newStateSorted.currentFocus != newState.currentFocus) {
       newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus();
       console.log(
@@ -50,7 +52,7 @@ function sortByColumn(newState) {
 
 export default function reducerMedTable(state, action) {
   var newState = {
-    currentFocus: -1,
+    currentFocus: state.currentFocus,
     tableHeader: [...state.tableHeader],
     tableHeaderFocus: [...state.tableHeaderFocus],
     tableHeaderDisplay: [...state.tableHeaderDisplay],
@@ -64,6 +66,16 @@ export default function reducerMedTable(state, action) {
     case 'setTableCell':
       newState.tableCell[action.payload.x][action.payload.y] =
         action.payload.value;
+      return newState;
+    case 'headerFocusing':
+      console.log('focusing');
+      newState.currentFocus = action.payload.x;
+      console.log('newState.currentFocus: ', newState.currentFocus);
+
+      return newState;
+    case 'headerBluring':
+      console.log('blurring');
+      newState.currentFocus = -1;
       return newState;
     case 'setRefHeaderFocus':
       newState.tableHeaderFocus[action.payload.x] = action.payload.refFunction;
