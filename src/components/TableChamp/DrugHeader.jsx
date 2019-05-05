@@ -1,6 +1,7 @@
 import {
   isDispTimeNoColon_Digit,
   isValidDisplayTime,
+  test2DigitNoColon,
   test3DigitNoColon,
   ttEpo
 } from 'functions/functions.jsx';
@@ -57,10 +58,14 @@ function DrugHeader(props) {
 
   const validateValue = () => {
     let str = colonization(display);
+
     if (isValidDisplayTime(str)) {
       let result = str.split(':');
-      result[0] = result[0] || 0;
-      result[1] = result[1] || 0;
+      result[0] = result[0] || '0';
+      result[1] = result[1] || '0';
+      if (result[1].length < 2) {
+        result[1] += '0';
+      }
       confirmTime({
         hr: parseInt(result[0]),
         min: parseInt(result[1])
@@ -89,9 +94,14 @@ function DrugHeader(props) {
 
   const colonization = strx => {
     var str = strx.replace(/:/, '');
-
     let colonInsertIndex = -1;
-    if (isDispTimeNoColon_Digit[3].test(str)) {
+    if (isDispTimeNoColon_Digit[2].test(str)) {
+      if (test2DigitNoColon[0].test(str)) {
+        colonInsertIndex = 2;
+      } else if (test2DigitNoColon[1].test(str)) {
+        colonInsertIndex = 1;
+      }
+    } else if (isDispTimeNoColon_Digit[3].test(str)) {
       if (test3DigitNoColon[0].test(str)) {
         colonInsertIndex = 1;
       } else if (test3DigitNoColon[1].test(str)) {

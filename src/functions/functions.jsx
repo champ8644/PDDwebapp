@@ -45,7 +45,7 @@ const isDispTimeNoColon_Digit = [
   /^(([01]\d|2[0-3])[0-5]\d)$/
 ];
 const test3DigitNoColon = [/^((\d[0-5]\d))$/, /^((([01]\d|[2][0-3])[0-5]))$/];
-
+const test2DigitNoColon = [/^(([01]\d|[2][0-3]))$/, /^(\d[0-5])$/];
 function isValidDisplayTime(x) {
   for (let i = 0; i <= 4; i++)
     if (isDispTimeWithColon_Digit[i].test(x)) {
@@ -68,5 +68,6 @@ module.exports = {
   isValidDisplayTime,
   isDispTimeWithColon_Digit,
   isDispTimeNoColon_Digit,
-  test3DigitNoColon
+  test3DigitNoColon,
+  test2DigitNoColon
 };

@@ -33,18 +33,10 @@ function sortByColumn(newState) {
       );
     }
   }
-  console.log('newState.currentFocus: ', newState.currentFocus);
-  console.log('newStateSorted.currentFocus: ', newStateSorted.currentFocus);
   if (newState.currentFocus > 0) {
     newStateSorted.currentFocus = sortrepresent[newState.currentFocus].index;
-    console.log('newState.currentFocus: ', newState.currentFocus);
-    console.log('newStateSorted.currentFocus: ', newStateSorted.currentFocus);
     if (newStateSorted.currentFocus != newState.currentFocus) {
       newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus();
-      console.log(
-        'newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus: ',
-        newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus
-      );
     }
   }
   return newStateSorted;
@@ -68,13 +60,10 @@ export default function reducerMedTable(state, action) {
         action.payload.value;
       return newState;
     case 'headerFocusing':
-      console.log('focusing');
       newState.currentFocus = action.payload.x;
-      console.log('newState.currentFocus: ', newState.currentFocus);
 
       return newState;
     case 'headerBluring':
-      console.log('blurring');
       newState.currentFocus = -1;
       return newState;
     case 'setRefHeaderFocus':
