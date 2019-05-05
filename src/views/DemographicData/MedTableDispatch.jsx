@@ -39,6 +39,10 @@ function sortByColumn(newState) {
     newStateSorted.currentFocus = sortrepresent[newState.currentFocus].index;
     if (newStateSorted.currentFocus != newState.currentFocus) {
       newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus();
+      console.log(
+        'newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus: ',
+        newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus
+      );
     }
   }
   return newStateSorted;

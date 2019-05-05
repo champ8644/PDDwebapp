@@ -56,21 +56,13 @@ function DrugHeader(props) {
   const handleKeyDown = e => {
     // arrow up/down button should select next/previous list element
     switch (e.key) {
-      case 'ArrowLeft': // Left
-        handleOnBlur();
-        alterValue({ min: -15 });
-        break;
       case 'ArrowUp': // Up
-        handleOnBlur();
-        alterValue({ hr: 1 });
-        break;
-      case 'ArrowRight': // Right
         handleOnBlur();
         alterValue({ min: 15 });
         break;
       case 'ArrowDown': // Down
         handleOnBlur();
-        alterValue({ hr: -1 });
+        alterValue({ min: -15 });
         break;
       case 'Enter':
         e.target.blur();
@@ -79,24 +71,19 @@ function DrugHeader(props) {
   };
 
   const colonization = strx => {
-    console.log('colonization: ', colonization);
     var str = strx.replace(/:/, '');
-    console.log('str: ', str);
-    console.log('str: ', str.replace(/:/, ''));
+
     let colonInsertIndex = -1;
     if (isDispTimeNoColon_Digit[3].test(str)) {
-      console.log('isDispTimeNoColon_Digit: ', isDispTimeNoColon_Digit);
       if (test3DigitNoColon[0].test(str)) {
         colonInsertIndex = 1;
       } else if (test3DigitNoColon[1].test(str)) {
         colonInsertIndex = 2;
       }
     } else if (isDispTimeNoColon_Digit[4].test(str)) {
-      console.log('isDispTimeNoColon_Digit: ', isDispTimeNoColon_Digit);
       colonInsertIndex = 2;
     }
     if (colonInsertIndex > 0) {
-      console.log('colonInsertIndex: ', colonInsertIndex);
       str = str.slice(0, colonInsertIndex) + ':' + str.slice(colonInsertIndex);
     }
     return str;
@@ -108,7 +95,7 @@ function DrugHeader(props) {
       return;
     }
     let str = colonization(e.target.value);
-    console.log('handleOnChange e', e.target.value);
+
     if (isValidDisplayTime(str)) {
       setDisplay(str);
       return;
