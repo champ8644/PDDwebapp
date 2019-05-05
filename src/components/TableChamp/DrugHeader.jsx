@@ -1,6 +1,7 @@
 import {
-  isDisplayTimeWithColon,
-  isDisplayTimeWithoutColon,
+  isDispTimeNoColon_Digit,
+  isValidDisplayTime,
+  test3DigitNoColon,
   ttEpo
 } from 'functions/functions.jsx';
 
@@ -37,6 +38,7 @@ function DrugHeader(props) {
     display,
     setTime,
     setDisplay,
+    setRefFocus,
     DeleteColDialog
   } = props;
 
@@ -55,15 +57,19 @@ function DrugHeader(props) {
     // arrow up/down button should select next/previous list element
     switch (e.key) {
       case 'ArrowLeft': // Left
+        handleOnBlur();
         alterValue({ min: -15 });
         break;
       case 'ArrowUp': // Up
+        handleOnBlur();
         alterValue({ hr: 1 });
         break;
       case 'ArrowRight': // Right
+        handleOnBlur();
         alterValue({ min: 15 });
         break;
       case 'ArrowDown': // Down
+        handleOnBlur();
         alterValue({ hr: -1 });
         break;
       case 'Enter':
@@ -72,22 +78,42 @@ function DrugHeader(props) {
     }
   };
 
-  const handleOnChange = e => {
-    if (isDisplayTimeWithColon(e.target.value)) {
-      setDisplay(e.target.value);
-    } else if (isDisplayTimeWithoutColon(e.target.value)) {
-      let num = parseInt(e.target.value);
-      let output = e.target.value;
-      if (num > 99) {
-        output = e.target.value.slice(0, 2) + ':' + e.target.value.slice(2);
-      } else if (num > 999) {
-        output = e.target.value.slice(0, 3) + ':' + e.target.value.slice(3);
+  const colonization = strx => {
+    console.log('colonization: ', colonization);
+    var str = strx.replace(/:/, '');
+    console.log('str: ', str);
+    console.log('str: ', str.replace(/:/, ''));
+    let colonInsertIndex = -1;
+    if (isDispTimeNoColon_Digit[3].test(str)) {
+      console.log('isDispTimeNoColon_Digit: ', isDispTimeNoColon_Digit);
+      if (test3DigitNoColon[0].test(str)) {
+        colonInsertIndex = 1;
+      } else if (test3DigitNoColon[1].test(str)) {
+        colonInsertIndex = 2;
       }
-
-      setDisplay(output);
-    } else {
-      setDisplay(display);
+    } else if (isDispTimeNoColon_Digit[4].test(str)) {
+      console.log('isDispTimeNoColon_Digit: ', isDispTimeNoColon_Digit);
+      colonInsertIndex = 2;
     }
+    if (colonInsertIndex > 0) {
+      console.log('colonInsertIndex: ', colonInsertIndex);
+      str = str.slice(0, colonInsertIndex) + ':' + str.slice(colonInsertIndex);
+    }
+    return str;
+  };
+
+  const handleOnChange = e => {
+    if (isValidDisplayTime(e.target.value)) {
+      setDisplay(e.target.value);
+      return;
+    }
+    let str = colonization(e.target.value);
+    console.log('handleOnChange e', e.target.value);
+    if (isValidDisplayTime(str)) {
+      setDisplay(str);
+      return;
+    }
+    setDisplay(display);
   };
 
   const confirmTime = x => {
@@ -95,30 +121,24 @@ function DrugHeader(props) {
   };
 
   const handleOnBlur = () => {
-    if (isDisplayTimeWithColon(display)) {
-      let result = display.split(':');
+    let str = colonization(display);
+    if (isValidDisplayTime(str)) {
+      let result = str.split(':');
+      result[0] = result[0] || 0;
+      result[1] = result[1] || 0;
       confirmTime({
         hr: parseInt(result[0]),
         min: parseInt(result[1])
       });
-    } else if (isDisplayTimeWithoutColon(display)) {
-      let result = parseInt(display);
-
-      let output = {};
-      if (result < 100) {
-        output.hr = result;
-      } else if (result < 1000) {
-        output.hr = Math.floor(result / 10);
-        output.min = result % 10;
-      } else {
-        output.hr = Math.floor(result / 100);
-        output.min = result % 100;
-      }
-
-      confirmTime(output);
     } else {
-      throw Error('handle on blur error (impossible) : ' + display);
+      throw Error('handle on blur error (impossible) : ' + str);
     }
+  };
+
+  const addRefInput = () => {
+    return input => {
+      setRefFocus(input);
+    };
   };
 
   return (
@@ -132,6 +152,7 @@ function DrugHeader(props) {
           onChange={handleOnChange}
           onKeyDown={handleKeyDown}
           onBlur={handleOnBlur}
+          inputRef={addRefInput()}
           inputProps={{ style: { textAlign: 'center' } }}
         />
       </div>
@@ -146,6 +167,7 @@ DrugHeader.propTypes = {
   display: PropTypes.string.isRequired,
   handleDeleteCol: PropTypes.object.isRequired,
   setDisplay: PropTypes.object.isRequired,
+  setRefFocus: PropTypes.object.isRequired,
   setTime: PropTypes.object.isRequired,
   time: PropTypes.number.isRequired
 };

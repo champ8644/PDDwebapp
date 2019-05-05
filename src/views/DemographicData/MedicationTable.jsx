@@ -50,6 +50,7 @@ function MedicationTable({ ...props }) {
       ttEpo({ hr: 16 }),
       ttEpo({ hr: 23 })
     ],
+    tableHeaderFocus: [],
     tableHeaderDisplay: [
       ttStr({ hr: 8 }),
       ttStr({ hr: 12 }),

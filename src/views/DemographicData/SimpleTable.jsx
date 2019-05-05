@@ -59,6 +59,10 @@ function SimpleTable(props) {
     dispatch({ type: 'deleteTableRow', payload: { x: x } });
   };
 
+  const handleRefFocus = (e, x) => {
+    dispatch({ type: 'setRefHeaderFocus', payload: { refFunction: e, x: x } });
+  };
+
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
@@ -72,6 +76,7 @@ function SimpleTable(props) {
                   setDisplay={e => handleHeaderDisplay(e, timeId)}
                   time={time}
                   display={state.tableHeaderDisplay[timeId]}
+                  setRefFocus={e => handleRefFocus(e, timeId)}
                   DeleteColDialog={
                     <DeleteDialog
                       id={timeId}

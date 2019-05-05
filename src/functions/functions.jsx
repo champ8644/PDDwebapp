@@ -30,11 +30,34 @@ function isNumber(x) {
 function isFraction(x) {
   return /^\d*[¼½¾]$/.test(x);
 }
-function isDisplayTimeWithColon(x) {
-  return /^([01]?\d|2[0-3])?:([0-5]?\d)?$/.test(x);
-}
-function isDisplayTimeWithoutColon(x) {
-  return /^(\d|[01]\d([0-5]\d?)?|2[0-3]([0-5]\d?)?)$/.test(x);
+const isDispTimeWithColon_Digit = [
+  /^:$/,
+  /^((\d:)|(:\d))$/,
+  /^((([01]\d|[2][0-3]):)|(\d:\d)|(:[0-5]\d))$/,
+  /^((\d:[0-5]\d)|(([01]\d|[2][0-3]):[0-5]))$/,
+  /^(([01]\d|2[0-3]):([0-5]\d))$/
+];
+const isDispTimeNoColon_Digit = [
+  /^$/,
+  /^\d$/,
+  /^([01]\d|[2][0-3])$/,
+  /^((\d[0-5]\d)|(([01]\d|[2][0-3])[0-5]))$/,
+  /^(([01]\d|2[0-3])[0-5]\d)$/
+];
+const test3DigitNoColon = [/^((\d[0-5]\d))$/, /^((([01]\d|[2][0-3])[0-5]))$/];
+
+function isValidDisplayTime(x) {
+  for (let i = 0; i <= 4; i++)
+    if (isDispTimeWithColon_Digit[i].test(x)) {
+      console.log('WithColon:', i);
+      return true;
+    }
+  for (let i = 0; i <= 2; i++)
+    if (isDispTimeNoColon_Digit[i].test(x)) {
+      console.log('withoutColon:', i);
+      return true;
+    }
+  return false;
 }
 
 module.exports = {
@@ -44,6 +67,8 @@ module.exports = {
   isNumber,
   isFraction,
   epotStr,
-  isDisplayTimeWithColon,
-  isDisplayTimeWithoutColon
+  isValidDisplayTime,
+  isDispTimeWithColon_Digit,
+  isDispTimeNoColon_Digit,
+  test3DigitNoColon
 };
