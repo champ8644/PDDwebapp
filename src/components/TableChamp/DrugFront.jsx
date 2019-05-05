@@ -27,7 +27,7 @@ const style = theme => ({
 });
 
 function DrugHeader(props) {
-  const { classes, value, setValue } = props;
+  const { classes, value, setValue, DeleteRowDialog } = props;
 
   const toNumValue = x => {
     if (isNumber(x)) {
@@ -118,11 +118,13 @@ function DrugHeader(props) {
           inputProps={{ style: { textAlign: 'center' } }}
         />
       </div>
+      {DeleteRowDialog}
     </div>
   );
 }
 
 DrugHeader.propTypes = {
+  DeleteRowDialog: PropTypes.any,
   classes: PropTypes.any,
   drugType: PropTypes.any,
   setValue: PropTypes.any,

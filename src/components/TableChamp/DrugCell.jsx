@@ -32,8 +32,6 @@ const style = theme => ({
 function DrugCell(props) {
   const { classes, value, setValue, drugType } = props;
 
-  const [focus, setFocus] = useState(false);
-
   const toNumValue = x => {
     if (isNumber(x)) {
       return parseFloat(x);
@@ -111,6 +109,8 @@ function DrugCell(props) {
     }
   };
 
+  const [focus, setFocus] = useState(false);
+
   const handleFocus = () => {
     setFocus(true);
   };
@@ -119,14 +119,14 @@ function DrugCell(props) {
     setFocus(false);
   };
 
-  const handleClick = x => {
-    // to do: make button ripple
-    alterValue(x);
-  };
-
   const handleValue = () => {
     if (focus) return toNumValue(value);
     return toFracValue(value);
+  };
+
+  const handleClick = x => {
+    // to do: make button ripple
+    alterValue(x);
   };
 
   return (

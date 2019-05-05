@@ -17,11 +17,12 @@ const style = theme => ({
   }
 });
 
-function DeleteColDialog(props) {
-  const { classes, timeId, timeString, ConfirmDelCol } = props;
+function DeleteDialog(props) {
+  const { classes, id, name, ConfirmDel, type } = props;
+
   const [open, setOpen] = useState(false);
 
-  function handleDeleteCol() {
+  function handleDelete() {
     setOpen(true);
   }
 
@@ -30,21 +31,23 @@ function DeleteColDialog(props) {
   }
 
   function handleCloseDel() {
-    ConfirmDelCol();
+    ConfirmDel();
     setOpen(false);
   }
 
   return (
     <div>
-      <Delete className={classes.icon} onClick={handleDeleteCol} />
+      <Delete className={classes.icon} onClick={handleDelete} />
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle id='confirm-delete-col'>
-          {'Confirm delete column?'}
+        <DialogTitle id={'confirm-delete-' + type}>
+          Confirm delete {type}
+          {type == 'Col' ? 'umn' : ''} ?
         </DialogTitle>
         <DialogContent>
-          <DialogContentText id='confirm-delete-col-description'>
-            You are going to delete [Array No.{timeId}] [{timeString}] This cant
-            be undo. Are you sure?
+          <DialogContentText id={'confirm-delete-' + type + '-description'}>
+            You are going to delete [{type}
+            {type == 'Col' ? 'umn' : ''} No.{id}] [{name}] This can{"'"}t be
+            undo. Are you sure?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -60,11 +63,12 @@ function DeleteColDialog(props) {
   );
 }
 
-DeleteColDialog.propTypes = {
-  ConfirmDelCol: PropTypes.object.isRequired,
+DeleteDialog.propTypes = {
+  ConfirmDel: PropTypes.object.isRequired,
   classes: PropTypes.object,
-  timeId: PropTypes.number.isRequired,
-  timeString: PropTypes.string
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
 };
 
-export default withStyles(style)(DeleteColDialog);
+export default withStyles(style)(DeleteDialog);

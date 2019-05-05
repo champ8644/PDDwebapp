@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import { ttEpo, ttStr } from 'functions/functions.jsx';
 
 import Button from 'components/CustomButtons/Button.jsx';
 import Card from 'components/Card/Card.jsx';
@@ -8,7 +9,6 @@ import CardHeader from 'components/Card/CardHeader.jsx';
 import PropTypes from 'prop-types';
 import SimpleTable from 'views/DemographicData/SimpleTable.jsx';
 import reducerMedTable from 'views/DemographicData/MedTableDispatch.jsx';
-import { ttEpo } from 'functions/functions.jsx';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 // @material-ui/core components
@@ -49,6 +49,12 @@ function MedicationTable({ ...props }) {
       ttEpo({ hr: 12 }),
       ttEpo({ hr: 16 }),
       ttEpo({ hr: 23 })
+    ],
+    tableHeaderDisplay: [
+      ttStr({ hr: 8 }),
+      ttStr({ hr: 12 }),
+      ttStr({ hr: 16 }),
+      ttStr({ hr: 23 })
     ],
     tableFront: ['Drug A', 'Drug B', 'Drug C', 'Drug D', 'Drug E', 'Drug F'],
     tableCell: [

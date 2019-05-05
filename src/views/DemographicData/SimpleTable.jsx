@@ -1,4 +1,4 @@
-import DeleteColDialog from 'components/Dialog/DeleteColDialog.jsx';
+import DeleteDialog from 'components/Dialog/DeleteDialog.jsx';
 import DrugCell from 'components/TableChamp/DrugCell.jsx';
 import DrugFront from 'components/TableChamp/DrugFront.jsx';
 import DrugHeader from 'components/TableChamp/DrugHeader.jsx';
@@ -39,8 +39,12 @@ function SimpleTable(props) {
     dispatch({ type: 'setTableCell', payload: { x: x, y: y, value: e } });
   };
 
-  const handleHeader = (e, y) => {
-    dispatch({ type: 'setTableHeader', payload: { y: y, value: e } });
+  const handleHeader = (e, x) => {
+    dispatch({ type: 'setTableHeader', payload: { x: x, epoch: e } });
+  };
+
+  const handleHeaderDisplay = (e, x) => {
+    dispatch({ type: 'setTableHeaderDisplay', payload: { x: x, display: e } });
   };
 
   const handleFront = (e, x) => {
@@ -65,12 +69,15 @@ function SimpleTable(props) {
               <TableCell align='center' padding='none' key={timeId}>
                 <DrugHeader
                   setTime={e => handleHeader(e, timeId)}
+                  setDisplay={e => handleHeaderDisplay(e, timeId)}
                   time={time}
+                  display={state.tableHeaderDisplay[timeId]}
                   DeleteColDialog={
-                    <DeleteColDialog
-                      timeId={timeId}
-                      timeString={epotStr(state.tableHeader[timeId])}
-                      ConfirmDelCol={() => ConfirmDelCol(timeId)}
+                    <DeleteDialog
+                      id={timeId}
+                      name={epotStr(state.tableHeader[timeId])}
+                      ConfirmDel={() => ConfirmDelCol(timeId)}
+                      type='Col'
                     />
                   }
                 />
@@ -87,6 +94,14 @@ function SimpleTable(props) {
                   value={state.tableFront[rowId]}
                   drugType='tab'
                   DeleteRow={() => ConfirmDelRow(rowId)}
+                  DeleteRowDialog={
+                    <DeleteDialog
+                      id={rowId}
+                      name={state.tableFront[rowId]}
+                      ConfirmDel={() => ConfirmDelRow(rowId)}
+                      type='Row'
+                    />
+                  }
                 />
               </TableCell>
               {row.map((value, valueId) => (
