@@ -13,7 +13,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 const style = theme => ({
   icon: {
     margin: theme.spacing.unit,
-    alignSelf: 'center'
+    alignSelf: 'auto'
   }
 });
 

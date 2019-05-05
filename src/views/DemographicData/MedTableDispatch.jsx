@@ -4,6 +4,7 @@ function sortByColumn(newState) {
   // move tableHeader like sortrepresent
   let i,
     sortrepresent = [];
+
   for (i = 0; i < newState.tableHeader.length; i++) {
     sortrepresent.push({ index: i, value: newState.tableHeader[i] });
   }
@@ -11,13 +12,14 @@ function sortByColumn(newState) {
     return a.value - b.value;
   });
   let newStateSorted = {
-    currentFocus: -1,
+    currentFocus: newState.currentFocus,
     tableHeader: [],
     tableHeaderDisplay: [],
     tableHeaderFocus: [...newState.tableHeaderFocus],
     tableFront: [],
     tableCell: []
   };
+
   for (i = 0; i < newState.tableFront.length; i++) {
     newStateSorted.tableCell.push([]);
     newStateSorted.tableFront.push(newState.tableFront[i]);
@@ -33,12 +35,13 @@ function sortByColumn(newState) {
       );
     }
   }
-  if (newState.currentFocus > 0) {
+  if (newState.currentFocus >= 0) {
     newStateSorted.currentFocus = sortrepresent[newState.currentFocus].index;
     if (newStateSorted.currentFocus != newState.currentFocus) {
       newStateSorted.tableHeaderFocus[newStateSorted.currentFocus].focus();
     }
   }
+
   return newStateSorted;
 }
 
@@ -61,7 +64,6 @@ export default function reducerMedTable(state, action) {
       return newState;
     case 'headerFocusing':
       newState.currentFocus = action.payload.x;
-
       return newState;
     case 'headerBluring':
       newState.currentFocus = -1;
@@ -76,6 +78,7 @@ export default function reducerMedTable(state, action) {
         action.payload.epoch
       );
       // sort new tableHeader
+
       return sortByColumn(newState);
     }
     case 'setTableHeaderDisplay':

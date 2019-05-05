@@ -6,10 +6,13 @@ import {
   ttEpo
 } from 'functions/functions.jsx';
 
-import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import purple from '@material-ui/core/colors/purple';
 import withStyles from '@material-ui/core/styles/withStyles';
+
+//import { primaryColor } from 'assets/jss/material-dashboard-react.jsx';
 
 // @material-ui/core components
 const style = theme => ({
@@ -19,16 +22,39 @@ const style = theme => ({
   margin: {
     margin: theme.spacing.unit
   },
+  cssLabel: {
+    '&$cssFocused': {
+      color: purple[500]
+    }
+  },
+  cssFocused: {},
+  cssUnderline: {
+    '&:after': {
+      borderBottomColor: purple[500]
+    }
+  },
+  cssOutlinedInput: {
+    '&$cssFocused $notchedOutline': {
+      borderColor: purple[500],
+      textAlign: 'center'
+    }
+  },
+  notchedOutline: {},
   withoutLabel: {
     marginTop: theme.spacing.unit * 3
   },
-  inputCenter: {
+  input: {
     minWidth: '50px',
     textAlign: 'center'
   },
   icon: {
     margin: theme.spacing.unit,
     alignSelf: 'center'
+  },
+  disabled: {
+    '&:before': {
+      backgroundColor: 'transparent !important'
+    }
   }
 });
 
@@ -146,11 +172,41 @@ function DrugHeader(props) {
   };
 
   return (
-    <div className={classes.root}>
-      <div>
-        {}
+    <>
+      {}
+      <div className={classes.root}>
+        <TextField
+          className={classes.margin + ' ' + classes.input}
+          InputLabelProps={{
+            classes: {
+              root: classes.cssLabel,
+              focused: classes.cssFocused
+            }
+          }}
+          InputProps={{
+            classes: {
+              root: classes.cssOutlinedInput,
+              focused: classes.cssFocused,
+              notchedOutline: classes.notchedOutline
+            },
+            style: { textAlign: 'center' }
+          }}
+          label='Drug meal'
+          variant='outlined'
+          id='table-header'
+          value={display}
+          onChange={handleOnChange}
+          onKeyDown={handleKeyDown}
+          onBlur={handleOnBlur}
+          onFocus={handleOnFocusState}
+          inputRef={addRefInput()}
+        />
+        {DeleteColDialog}
+      </div>
+      {/*
+      <div className={classes.root}>
         <Input
-          id='adornment-password'
+          id='table-header'
           className={classes.inputCenter}
           value={display}
           onChange={handleOnChange}
@@ -160,9 +216,9 @@ function DrugHeader(props) {
           inputRef={addRefInput()}
           inputProps={{ style: { textAlign: 'center' } }}
         />
-      </div>
-      {DeleteColDialog}
-    </div>
+        {DeleteColDialog}
+      </div>*/}
+    </>
   );
 }
 

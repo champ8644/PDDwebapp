@@ -84,6 +84,33 @@ function MedicationTable({ ...props }) {
       </CardBody>
       <CardFooter>
         <Button color='rose'>Update Medications</Button>
+        <Button
+          color='primary'
+          onClick={() => state.tableHeaderFocus[0].focus()}
+        >
+          Click me {0}
+        </Button>
+
+        <Button
+          color='primary'
+          onClick={() => state.tableHeaderFocus[1].focus()}
+        >
+          Click me {1}
+        </Button>
+
+        <Button
+          color='primary'
+          onClick={() => state.tableHeaderFocus[2].focus()}
+        >
+          Click me {2}
+        </Button>
+
+        <Button
+          color='primary'
+          onClick={() => state.tableHeaderFocus[3].focus()}
+        >
+          Click me {3}
+        </Button>
       </CardFooter>
     </Card>
   );
