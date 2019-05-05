@@ -113,7 +113,7 @@ function DrugHeader(props) {
         alterValue({ min: -15 });
         break;
       case 'Enter':
-        e.target.blur();
+        validateValue();
         break;
     }
   };
@@ -161,8 +161,8 @@ function DrugHeader(props) {
   };
 
   const handleOnBlur = () => {
-    handleOnBlurState();
     validateValue();
+    handleOnBlurState();
   };
 
   const addRefInput = () => {

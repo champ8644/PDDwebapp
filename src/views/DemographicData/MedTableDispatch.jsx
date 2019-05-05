@@ -46,6 +46,8 @@ function sortByColumn(newState) {
 }
 
 export default function reducerMedTable(state, action) {
+  console.log('state: ', state);
+  console.log('action: ', action);
   var newState = {
     currentFocus: state.currentFocus,
     tableHeader: [...state.tableHeader],
