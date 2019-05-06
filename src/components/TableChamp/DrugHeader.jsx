@@ -172,53 +172,35 @@ function DrugHeader(props) {
   };
 
   return (
-    <>
-      {}
-      <div className={classes.root}>
-        <TextField
-          className={classes.margin + ' ' + classes.input}
-          InputLabelProps={{
-            classes: {
-              root: classes.cssLabel,
-              focused: classes.cssFocused
-            }
-          }}
-          InputProps={{
-            classes: {
-              root: classes.cssOutlinedInput,
-              focused: classes.cssFocused,
-              notchedOutline: classes.notchedOutline
-            },
-            style: { textAlign: 'center' }
-          }}
-          label='Drug meal'
-          variant='outlined'
-          id='table-header'
-          value={display}
-          onChange={handleOnChange}
-          onKeyDown={handleKeyDown}
-          onBlur={handleOnBlur}
-          onFocus={handleOnFocusState}
-          inputRef={addRefInput()}
-        />
-        {DeleteColDialog}
-      </div>
-      {/*
-      <div className={classes.root}>
-        <Input
-          id='table-header'
-          className={classes.inputCenter}
-          value={display}
-          onChange={handleOnChange}
-          onKeyDown={handleKeyDown}
-          onBlur={handleOnBlur}
-          onFocus={handleOnFocusState}
-          inputRef={addRefInput()}
-          inputProps={{ style: { textAlign: 'center' } }}
-        />
-        {DeleteColDialog}
-      </div>*/}
-    </>
+    <div className={classes.root}>
+      <TextField
+        className={classes.margin + ' ' + classes.input}
+        InputLabelProps={{
+          classes: {
+            root: classes.cssLabel,
+            focused: classes.cssFocused
+          }
+        }}
+        InputProps={{
+          classes: {
+            root: classes.cssOutlinedInput,
+            focused: classes.cssFocused,
+            notchedOutline: classes.notchedOutline
+          },
+          style: { textAlign: 'center' }
+        }}
+        label='Drug meal'
+        variant='outlined'
+        id='table-header'
+        value={display}
+        onChange={handleOnChange}
+        onKeyDown={handleKeyDown}
+        onBlur={handleOnBlur}
+        onFocus={handleOnFocusState}
+        inputRef={addRefInput()}
+      />
+      {DeleteColDialog}
+    </div>
   );
 }
 

@@ -11,6 +11,9 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 
 const style = theme => ({
+  root: {
+    alignSelf: 'center'
+  },
   icon: {
     margin: theme.spacing.unit,
     alignSelf: 'auto'
@@ -36,7 +39,7 @@ function DeleteDialog(props) {
   }
 
   return (
-    <div>
+    <div className={classes.root}>
       <Delete className={classes.icon} onClick={handleDelete} />
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle id={'confirm-delete-' + type}>
