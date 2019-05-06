@@ -37,7 +37,7 @@ var createMedicationSchedule = async function() {
 			addingSet = (shouldAdd == 'y' || shouldAdd == 'Y');
 			if(!addingSet) {
 				if(medicationSets.length) {
-					var schedule = new PDDiaryMedicationSchedule(Date.now(), 0, medicationSets);
+					var schedule = new PDDiaryMedicationSchedule(Date.now()/1000.0, 0, medicationSets);
 					resolve(schedule);
 				}
 				else resolve(null);
