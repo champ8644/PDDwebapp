@@ -15,8 +15,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   root: {
-    overflow: 'auto', // added code
-    overflowY: 'hidden',
     overflowX: 'auto',
     maxWidth: '100%',
     marginTop: theme.spacing.unit * 3

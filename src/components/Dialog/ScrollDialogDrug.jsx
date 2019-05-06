@@ -6,6 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import MedicationQuery from 'components/ChampCustoms/MedicationQuery.jsx';
+import ReactVirtualizedTable from 'components/Table/ReactVirtualizedTable.jsx';
 
 function ScrollDialogDrug() {
   const [open, setOpen] = React.useState(false);
@@ -22,73 +23,24 @@ function ScrollDialogDrug() {
 
   return (
     <div>
-      <Button onClick={handleClickOpen('paper')}>Open Dialog</Button>
+      <Button onClick={handleClickOpen('disable')}>Open Dialog</Button>
       <Dialog
+        fullWidth={true}
+        maxWidth={'100%'}
         open={open}
         onClose={handleClose}
-        scroll={scroll}
         aria-labelledby='scroll-dialog-title'
       >
-        <DialogTitle id='scroll-dialog-title'>Subscribe</DialogTitle>
+        <DialogTitle id='scroll-dialog-title'>Medication</DialogTitle>
         <DialogContent>
-          <MedicationQuery />
-          <DialogContentText>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
-            vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia
-            bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla. Cras mattis
-            consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
-            facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros. Praesent commodo cursus magna,
-            vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
-            augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum
-            nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla. Cras mattis
-            consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
-            facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros. Praesent commodo cursus magna,
-            vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
-            augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum
-            nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla. Cras mattis
-            consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
-            facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros. Praesent commodo cursus magna,
-            vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
-            augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum
-            nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla. Cras mattis
-            consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
-            facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros. Praesent commodo cursus magna,
-            vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
-            augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum
-            nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla. Cras mattis
-            consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
-            facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros. Praesent commodo cursus magna,
-            vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel
-            augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum
-            nulla sed consectetur. Praesent commodo cursus magna, vel
-            scelerisque nisl consectetur et. Donec sed odio dui. Donec
-            ullamcorper nulla non metus auctor fringilla.
-          </DialogContentText>
+          <ReactVirtualizedTable />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color='primary'>
-            Cancel
+            Select
           </Button>
           <Button onClick={handleClose} color='primary'>
-            Subscribe
+            Cancel
           </Button>
         </DialogActions>
       </Dialog>
