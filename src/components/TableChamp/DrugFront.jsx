@@ -4,11 +4,16 @@ import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
 import React from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
+import ScrollDialogDrug from 'components/Dialog/ScrollDialogDrug.jsx';
 
 // @material-ui/core components
 const style = theme => ({
   root: {
-    display: 'inline-flex'
+    display: 'inline-flex',
+    width: '100%'
+  },
+  inputroot: {
+    width: '100%'
   },
   margin: {
     margin: theme.spacing.unit
@@ -18,11 +23,14 @@ const style = theme => ({
   },
   inputCenter: {
     minWidth: '60px',
-    textAlign: 'center'
+    width: '100%'
   },
   icon: {
     margin: theme.spacing.unit,
     alignSelf: 'center'
+  },
+  inputProps: {
+    textAlign: 'center'
   }
 });
 
@@ -108,15 +116,18 @@ function DrugHeader(props) {
 
   return (
     <div className={classes.root}>
-      <div>
+      <div className={classes.inputroot}>
         <Input
           id='adornment-password'
           className={classes.inputCenter}
           value={value}
           onChange={handleOnChange}
           onKeyDown={handleKeyDown}
-          inputProps={{ style: { textAlign: 'center' } }}
+          inputProps={{
+            className: classes.inputProps
+          }}
         />
+        <ScrollDialogDrug />
       </div>
       {DeleteRowDialog}
     </div>
