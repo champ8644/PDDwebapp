@@ -1,42 +1,42 @@
 import {
-  primaryColor,
   dangerColor,
-  successColor,
+  defaultFont,
   grayColor,
-  defaultFont
-} from "assets/jss/material-dashboard-react.jsx";
+  primaryColor,
+  successColor
+} from 'assets/jss/material-dashboard-react.jsx';
 
 const customInputStyle = {
   disabled: {
-    "&:before": {
-      backgroundColor: "transparent !important"
+    '&:before': {
+      backgroundColor: 'transparent !important'
     }
   },
   underline: {
-    "&:hover:not($disabled):before,&:before": {
-      borderColor: grayColor[4] + " !important",
-      borderWidth: "1px !important"
+    '&:hover:not($disabled):before,&:before': {
+      borderColor: grayColor[4] + ' !important',
+      borderWidth: '1px !important'
     },
-    "&:after": {
+    '&:after': {
       borderColor: primaryColor[0]
     }
   },
   underlineError: {
-    "&:after": {
+    '&:after': {
       borderColor: dangerColor[0]
     }
   },
   underlineSuccess: {
-    "&:after": {
+    '&:after': {
       borderColor: successColor[0]
     }
   },
   labelRoot: {
     ...defaultFont,
-    color: grayColor[3] + " !important",
-    fontWeight: "400",
-    fontSize: "30px",
-    lineHeight: "1.42857"
+    color: grayColor[3] + ' !important',
+    fontWeight: '400',
+    fontSize: '30px',
+    lineHeight: '1.42857'
   },
   labelRootError: {
     color: dangerColor[0]
@@ -45,35 +45,34 @@ const customInputStyle = {
     color: successColor[0]
   },
   feedback: {
-    position: "absolute",
-    top: "18px",
-    right: "0",
-    zIndex: "2",
-    display: "block",
-    width: "24px",
-    height: "24px",
-    textAlign: "center",
-    pointerEvents: "none",
+    position: 'absolute',
+    top: '18px',
+    right: '0',
+    zIndex: '2',
+    display: 'block',
+    width: '24px',
+    height: '24px',
+    textAlign: 'center',
+    pointerEvents: 'none'
   },
   cssOutlinedInputHN: {
     '&$cssFocusedHN $notchedOutlineHN': {
-      borderColor: '#9c27b0' + ' !important',
+      borderColor: '#9c27b0' + ' !important'
     }
   },
-  cssFocusedHN: {
-  },
+  cssFocusedHN: {},
   notchedOutlineHN: {
-    borderWidth: '1px',
+    borderWidth: '1px'
   },
   marginTop: {
-    marginTop: "0px",
+    marginTop: '0px'
   },
   formControl: {
-    paddingBottom: "10px",
-    margin: "10px 0 0 0",
-    position: "relative",
-    verticalAlign: "unset"
-  },
+    paddingBottom: '10px',
+    margin: '10px 0 0 0',
+    position: 'relative',
+    verticalAlign: 'unset'
+  }
 };
 
 export default customInputStyle;

@@ -1,0 +1,7 @@
+{
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400" // Regular
+}

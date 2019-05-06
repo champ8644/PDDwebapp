@@ -1,0 +1,48 @@
+[
+    {
+        "timeDrug": 21600,
+        "medList": [
+            {
+                "quantity": 1,
+                "medID": 4,
+                "tradeName": "Madopar",
+                "doseID": 0,
+                "dose": "50/200",
+                "dosageForm": "tab",
+                "unit": "mg"
+            },
+            {
+                "quantity": 1,
+                "medID": 5,
+                "tradeName": "Comtan",
+                "doseID": 0,
+                "dose": "50/200",
+                "dosageForm": "tab",
+                "unit": "mg"
+            }
+        ]
+    },
+    {
+        "timeDrug": 64800,
+        "medList": [
+            {
+                "quantity": 1,
+                "medID": 4,
+                "tradeName": "Madopar",
+                "doseID": 0,
+                "dose": "50/200",
+                "dosageForm": "tab",
+                "unit": "mg"
+            },
+            {
+                "quantity": 1,
+                "medID": 5,
+                "tradeName": "Comtan",
+                "doseID": 0,
+                "dose": "50/200",
+                "dosageForm": "tab",
+                "unit": "mg"
+            }
+        ]
+    }
+]
