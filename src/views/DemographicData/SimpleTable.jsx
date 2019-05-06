@@ -82,8 +82,8 @@ function SimpleTable(props) {
                 <DrugHeader
                   setTime={e => handleHeader(e, timeId)}
                   setDisplay={e => handleHeaderDisplay(e, timeId)}
-                  time={time}
-                  display={state.tableHeaderDisplay[timeId]}
+                  time={(() => time)()}
+                  display={(() => state.tableHeaderDisplay[timeId])()}
                   setRefFocus={e => handleRefFocus(e, timeId)}
                   handleOnFocusState={() => handleOnFocusHeader(timeId)}
                   handleOnBlurState={handleOnBlurHeader}

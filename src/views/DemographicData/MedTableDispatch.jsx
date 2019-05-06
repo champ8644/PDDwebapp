@@ -46,8 +46,6 @@ function sortByColumn(newState) {
 }
 
 export default function reducerMedTable(state, action) {
-  console.log('state: ', state);
-  console.log('action: ', action);
   var newState = {
     currentFocus: state.currentFocus,
     tableHeader: [...state.tableHeader],
@@ -80,8 +78,8 @@ export default function reducerMedTable(state, action) {
         action.payload.epoch
       );
       // sort new tableHeader
-
-      return sortByColumn(newState);
+      let s = sortByColumn(newState);
+      return s;
     }
     case 'setTableHeaderDisplay':
       newState.tableHeaderDisplay[action.payload.x] = action.payload.display;
