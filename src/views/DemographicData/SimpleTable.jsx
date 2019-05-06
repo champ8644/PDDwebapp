@@ -29,6 +29,10 @@ const styles = theme => ({
     tableLayout: 'auto',
     padding: '5px 5 5 5'
     //wordWrap: 'break-word',
+  },
+  tablefront: {
+    minWidth: '200px',
+    paddingRight: 5
   }
 });
 
@@ -103,7 +107,11 @@ function SimpleTable(props) {
         <TableBody>
           {state.tableCell.map((row, rowId) => (
             <TableRow key={rowId}>
-              <TableCell component='th' scope='row'>
+              <TableCell
+                component='th'
+                scope='row'
+                className={classes.tablefront}
+              >
                 <DrugFront
                   setValue={e => handleFront(e, rowId)}
                   value={state.tableFront[rowId]}
