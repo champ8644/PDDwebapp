@@ -84,6 +84,7 @@ var newMedicationSetForATime = async function() {
 				var tradename = await readlineQuestionPromise('Enter the drug\'s tradename.');
 				var index = await readlineQuestionPromise('Enter the drug\'s index (id field) in the database.');
 				var amount = await readlineQuestionPromise('Enter the amount to prescribe.');
+				var doseUnit = await readlineQuestionPromise('Enter the drug\'s dosage unit.');
 				var reference = new PDDiaryMedicationReference(index, tradename);
 				var prescription = new PDDiaryMedicationPrescription(reference, index);
 				currentPrescriptions.push(prescription);
