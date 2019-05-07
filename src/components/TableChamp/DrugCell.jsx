@@ -162,8 +162,8 @@ function DrugCell(props) {
 DrugCell.propTypes = {
   classes: PropTypes.object,
   drugType: PropTypes.string,
-  setValue: PropTypes.object.isRequired,
-  value: PropTypes.string.isRequired
+  setValue: PropTypes.func.isRequired,
+  value: PropTypes.number.isRequired
 };
 
 function areEqual(prevProps, nextProps) {

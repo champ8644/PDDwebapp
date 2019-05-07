@@ -1,0 +1,9 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyDBgYHAo60KllU1Iecxyw6z0GNPqU0eSUw",
+  authDomain: "pd-diary.firebaseapp.com",
+  databaseURL: "https://pd-diary.firebaseio.com",
+  projectId: "pd-diary",
+  storageBucket: "pd-diary.appspot.com",
+  messagingSenderId: "482238828132",
+  appId: "1:482238828132:web:7811ea487e2faa7f"
+};

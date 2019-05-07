@@ -208,12 +208,11 @@ DrugHeader.propTypes = {
   DeleteColDialog: PropTypes.element.isRequired,
   classes: PropTypes.any,
   display: PropTypes.string.isRequired,
-  handleDeleteCol: PropTypes.object.isRequired,
-  handleOnBlurState: PropTypes.object.isRequired,
-  handleOnFocusState: PropTypes.object.isRequired,
-  setDisplay: PropTypes.object.isRequired,
-  setRefFocus: PropTypes.object.isRequired,
-  setTime: PropTypes.object.isRequired,
+  handleOnBlurState: PropTypes.func.isRequired,
+  handleOnFocusState: PropTypes.func.isRequired,
+  setDisplay: PropTypes.func.isRequired,
+  setRefFocus: PropTypes.func.isRequired,
+  setTime: PropTypes.func.isRequired,
   time: PropTypes.number.isRequired
 };
 

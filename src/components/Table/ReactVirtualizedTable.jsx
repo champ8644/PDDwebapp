@@ -7,6 +7,7 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Paper from '@material-ui/core/Paper';
 import { AutoSizer, Column, SortDirection, Table } from 'react-virtualized';
 import DatabaseMed from 'database/DatabaseMed.json';
+import { Meddb } from 'database/PDDfirebase.jsx';
 
 const styles = theme => ({
   table: {
@@ -207,8 +208,18 @@ for (let i = 0; i < DatabaseMed.length; i++) {
   }
 }
 
+{
+  /*
+console.log(Meddb.all);
+
 console.log('Database: ', DatabaseMed);
 
+const rows = Meddb.all();
+if (rows===undefined) {
+  throw Error 
+}
+*/
+}
 function ReactVirtualizedTable() {
   return (
     <Paper style={{ height: '60vh', width: '100%' }}>

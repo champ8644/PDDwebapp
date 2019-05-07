@@ -47,10 +47,10 @@ function UserProfile(props) {
   const { classes } = props;
   return (
     <div style={{ marginTop: '0px' }}>
-      <GridContainer>
+      <GridContainer loading>
         <GridItem xs={12} sm={6} md={5} lg={4}>
           <Card noTopMargin>
-            <CardBody>
+            <CardBody loading>
               <HNInput
                 noMargin
                 labelText='HN'
@@ -84,7 +84,7 @@ function UserProfile(props) {
                 <img src={avatar} alt='...' />
               </a>
             </CardAvatar>
-            <CardBody profile noTopMargin>
+            <CardBody profile>
               <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
               <h4 className={classes.cardTitle}>Switt Kongdachalert</h4>
               <img width='100%' src={switt} alt='switt is excited' />

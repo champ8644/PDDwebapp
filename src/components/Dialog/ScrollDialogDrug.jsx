@@ -26,7 +26,7 @@ function ScrollDialogDrug() {
       <Button onClick={handleClickOpen('disable')}>Open Dialog</Button>
       <Dialog
         fullWidth={true}
-        maxWidth={'100%'}
+        maxWidth={'lg'}
         open={open}
         onClose={handleClose}
         aria-labelledby='scroll-dialog-title'

@@ -67,7 +67,7 @@ function DeleteDialog(props) {
 }
 
 DeleteDialog.propTypes = {
-  ConfirmDel: PropTypes.object.isRequired,
+  ConfirmDel: PropTypes.func.isRequired,
   classes: PropTypes.object,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
