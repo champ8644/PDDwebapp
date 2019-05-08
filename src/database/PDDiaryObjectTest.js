@@ -37,7 +37,7 @@ var createMedicationSchedule = async function() {
 			addingSet = (shouldAdd == 'y' || shouldAdd == 'Y');
 			if(!addingSet) {
 				if(medicationSets.length) {
-					var schedule = new PDDiaryMedicationSchedule(Date.now(), 0, medicationSets);
+					var schedule = new PDDiaryMedicationSchedule(Date.now()/1000.0, 0, medicationSets);
 					resolve(schedule);
 				}
 				else resolve(null);
@@ -83,9 +83,11 @@ var newMedicationSetForATime = async function() {
 				
 				var tradename = await readlineQuestionPromise('Enter the drug\'s tradename.');
 				var index = await readlineQuestionPromise('Enter the drug\'s index (id field) in the database.');
+				var dose = await readlineQuestionPromise('Enter the drug\'s dose.');
+				var doseUnit = await readlineQuestionPromise('Enter the drug\'s dosage unit.');
 				var amount = await readlineQuestionPromise('Enter the amount to prescribe.');
-				var reference = new PDDiaryMedicationReference(index, tradename);
-				var prescription = new PDDiaryMedicationPrescription(reference, index);
+				var reference = new PDDiaryMedicationReference(index, tradename, dose, doseUnit);
+				var prescription = new PDDiaryMedicationPrescription(reference, amount);
 				currentPrescriptions.push(prescription);
 			}
 		});

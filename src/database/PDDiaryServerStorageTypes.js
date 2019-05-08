@@ -57,12 +57,18 @@ class PDDiaryMedicationReference {
      * 
      * @param {Number} drugId 
      * @param {String} tradeName 
+     * @param {String} dose
+     * @param {String} doseUnit
      */
-    constructor(drugId, tradeName) {
+    constructor(drugId, tradeName, dose, doseUnit) {
         /** @type {Number} index (the index of the object, as seen on Firebase Storage) */
         this.drugId = drugId;
         /** @type {String} The drug's trade name */
         this.tradeName = tradeName;
+        /** @type {String} The drug's dose*/
+        this.dose = dose;
+        /** @type {String} the drug's doseUnit*/
+        this.doseUnit = doseUnit;
     }
     medicationDocumentString() {
         /**
