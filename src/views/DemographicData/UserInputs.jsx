@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
-import React, { useCallback } from "react";
+import React from "react";
+import PropTypes from "prop-types";
+
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -12,12 +14,14 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-import PropTypes from "prop-types";
+
 
 // custom components
 import Select from "components/Select/Select.jsx";
 import CustomInput from "components/CustomInput/MemoizedInput.jsx";
+import DatePicker from "components/DatePicker/DatePicker.jsx";
 
+// other components
 import {Formik} from "formik";
 import * as Yup from "yup";
 
@@ -64,15 +68,15 @@ function UserInputs(props) {
 
   const { classes } = props;
   
-  const handleSubmit = useCallback( ( values, {setSubmitting}) => {
+  const handleFormSubmit =  ( values, {setSubmitting}) => {
     console.log(values);
-  },[]);
+  };
 
   return (
     <Card>
       <Formik 
         initialValues={initialValue}
-        onSubmit={handleSubmit}
+        onSubmit={handleFormSubmit}
         validationSchema={ PatientInfoSchema}
         >
       {({
@@ -91,6 +95,12 @@ function UserInputs(props) {
           </CardHeader>
           <CardBody>
             <GridContainer>
+
+              <GridItem xs={12} sm={12} md={12}>
+                {/*JSON.stringify(values)*/}
+              </GridItem>
+
+
               <GridItem xs={12} sm={12} md={3}>
                 <Select label="Prefix" error={errors.prefix && touched.prefix} name="prefix" value={values.prefix} onChange={handleChange}>
                   <MenuItem value={"นาย"}>นาย</MenuItem>
@@ -115,7 +125,7 @@ function UserInputs(props) {
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
-                <CustomInput key={3}  labelText="Birth Date" error={errors.birthDate && touched.birthDate} inputProps={{name: 'birthDate',value:  values.birthDate, onChange: handleChange, onBlur:handleBlur}}/>
+                <DatePicker label="Birth Date" error={errors.birthDate && touched.birthDate} name="birthDate" value={values.birthDate} onChange={handleChange}/>
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
@@ -123,7 +133,11 @@ function UserInputs(props) {
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
-                <CustomInput labelText="Marital Status" error={errors.maritalStatus && touched.maritalStatus} inputProps={{name: 'maritalStatus',value:  values.maritalStatus, onChange: handleChange, onBlur:handleBlur}}/>
+                <Select label="สถานภาพสมรส" error={errors.maritalStatus && touched.maritalStatus} name="maritalStatus" value={values.maritalStatus} onChange={handleChange}>
+                  <MenuItem value={"โสด"}>โสด</MenuItem>
+                  <MenuItem value={"สมรส"}>สมรส</MenuItem>
+                  <MenuItem value={"อื่นๆ"}>อื่นๆ</MenuItem>                    
+                </Select>
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
@@ -159,7 +173,7 @@ function UserInputs(props) {
               </GridItem> 
               
               <GridItem xs={12} sm={12} md={3}>
-                <CustomInput labelText="AgeOnset" error={errors.ageOnset && touched.ageOnset} inputProps={{name: 'ageOnset',value: values.ageOnset, onChange: handleChange, onBlur: handleBlur }}/>
+                <DatePicker label="AgeOnset" error={errors.ageOnset && touched.ageOnset} inputProps={{name: 'ageOnset',value: values.ageOnset, onChange: handleChange, onBlur: handleBlur }}/>
               </GridItem>
 
               <GridItem xs={12} sm={12} md={3}>
@@ -228,7 +242,8 @@ function UserInputs(props) {
 
               <GridItem xs={12} sm={12} md={3}>
                 <CustomInput labelText="DexterityIndex" error={errors.dexterityIndex && touched.dexterityIndex} inputProps={{name: 'dexterityIndex',value:  values.dexterityIndex, onChange: handleChange, onBlur: handleBlur }}/>
-              </GridItem>    
+              </GridItem>  
+
               
             </GridContainer>
           </CardBody>
